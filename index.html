@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FaithFlow — Scripture, Reimagined for Today</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #3E2213;
+    --brown: #6D3B1F;
+    --brown-light: #8A4F2A;
+    --parchment: #F5E6D0;
+    --parchment-dim: #E8D6B8;
+    --gold: #C89B64;
+    --gold-bright: #E8C87A;
+    --ember: #C97B84;
+    --max: 1120px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+  body{
+    font-family:'Poppins', sans-serif;
+    background: var(--ink);
+    color: var(--parchment);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  :focus-visible{ outline:2px solid var(--gold-bright); outline-offset:3px; }
+
+  .wrap{ max-width:var(--max); margin:0 auto; padding:0 28px; }
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    background: rgba(62,34,19,0.86);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid rgba(232,200,122,0.12);
+  }
+  nav .wrap{ display:flex; align-items:center; justify-content:space-between; height:72px; }
+  .brand{ display:flex; align-items:center; gap:10px; font-family:'Lora', serif; font-weight:700; font-size:19px; letter-spacing:0.2px; }
+  .brand .mark{ width:28px; height:28px; }
+  .navlinks{ display:flex; align-items:center; gap:34px; }
+  .navlinks a{ font-size:14px; font-weight:400; color: var(--parchment-dim); transition: color .2s; }
+  .navlinks a:hover{ color: var(--gold-bright); }
+  .nav-cta{
+    padding:10px 20px; border-radius:100px;
+    background: var(--gold-bright); color: var(--ink);
+    font-weight:600; font-size:13.5px;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .nav-cta:hover{ transform: translateY(-1px); box-shadow: 0 8px 20px -8px rgba(232,200,122,0.6); }
+  .navlinks-mobile-hide{ display:flex; }
+  @media (max-width: 720px){ .navlinks-mobile-hide{ display:none; } }
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    position:relative;
+    padding:180px 0 120px;
+    background:
+      radial-gradient(90% 60% at 50% 0%, rgba(138,79,42,0.35) 0%, transparent 60%),
+      linear-gradient(180deg, var(--ink) 0%, #2C170D 100%);
+    text-align:center;
+    overflow:hidden;
+  }
+  .embers{ position:absolute; inset:0; pointer-events:none; }
+  .ember-dot{
+    position:absolute; width:3px; height:3px; border-radius:50%;
+    background: var(--gold); opacity:.5;
+    animation: emberrise linear infinite;
+  }
+  @keyframes emberrise{
+    0%{ transform:translateY(0); opacity:0; }
+    12%{ opacity:.55; }
+    88%{ opacity:.25; }
+    100%{ transform:translateY(-620px); opacity:0; }
+  }
+
+  .dove-stage{ position:relative; height:230px; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; }
+  .dove{
+    width:76px; height:auto;
+    opacity:0; transform: translateY(-16px);
+    animation: dove-in 1.1s ease forwards .2s;
+    filter: drop-shadow(0 0 22px rgba(232,200,122,0.35));
+  }
+  @keyframes dove-in{ to{ opacity:1; transform:translateY(0); } }
+  .thread{
+    width:2px; background: repeating-linear-gradient(180deg, var(--gold) 0 6px, transparent 6px 12px);
+    height:0; margin-top:6px;
+    animation: thread-grow 1s ease forwards 1s;
+  }
+  @keyframes thread-grow{ to{ height:64px; } }
+
+  .hero h1{
+    font-family:'Lora', serif; font-weight:700;
+    font-size: clamp(40px, 6vw, 68px);
+    line-height:1.08;
+    margin-top:34px;
+    color: var(--parchment);
+    opacity:0; animation: rise-in .9s ease forwards 1.6s;
+  }
+  .hero h1 em{ color: var(--gold-bright); font-style:italic; }
+  .hero p.sub{
+    max-width:560px; margin:22px auto 0;
+    color: var(--parchment-dim); font-size:17px; font-weight:300;
+    opacity:0; animation: rise-in .9s ease forwards 1.85s;
+  }
+  @keyframes rise-in{ from{ opacity:0; transform:translateY(14px);} to{opacity:1; transform:translateY(0);} }
+
+  .hero-ctas{
+    display:flex; gap:16px; justify-content:center; margin-top:40px; flex-wrap:wrap;
+    opacity:0; animation: rise-in .9s ease forwards 2.1s;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:9px;
+    padding:15px 28px; border-radius:100px; font-weight:600; font-size:14.5px;
+    transition: transform .2s, box-shadow .2s, background .2s;
+  }
+  .btn svg{ width:17px; height:17px; }
+  .btn-primary{ background: var(--gold-bright); color: var(--ink); }
+  .btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 10px 26px -10px rgba(232,200,122,0.55); }
+  .btn-ghost{ background: rgba(245,230,208,0.06); color: var(--parchment); border:1px solid rgba(245,230,208,0.22); }
+  .btn-ghost:hover{ background: rgba(245,230,208,0.12); transform: translateY(-2px); }
+
+  .hero-note{
+    margin-top:26px; font-size:12.5px; letter-spacing:1px; text-transform:uppercase;
+    color: var(--gold); opacity:0; animation: rise-in .9s ease forwards 2.3s;
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{ padding:110px 0; position:relative; }
+  .eyebrow{
+    font-family:'Poppins', sans-serif; font-weight:600; font-size:12.5px;
+    letter-spacing:2px; text-transform:uppercase; color: var(--gold);
+    display:inline-block; margin-bottom:18px;
+  }
+  .section-title{
+    font-family:'Lora', serif; font-weight:600; font-size: clamp(28px, 3.6vw, 42px);
+    max-width:640px; color: var(--parchment); line-height:1.2;
+  }
+  .section-lede{
+    max-width:520px; color: var(--parchment-dim); font-weight:300; font-size:16px; margin-top:16px;
+  }
+
+  /* ---------- FEATURES ---------- */
+  .features-head{ text-align:center; margin-bottom:64px; }
+  .features-head .section-title, .features-head .section-lede{ margin-left:auto; margin-right:auto; }
+
+  .feat-groups{ position:relative; }
+  .feat-groups::before{
+    content:""; position:absolute; left:24px; top:14px; bottom:14px; width:2px;
+    background: repeating-linear-gradient(180deg, var(--gold) 0 6px, transparent 6px 13px);
+    opacity:.55;
+  }
+  @media (max-width:720px){ .feat-groups::before{ display:none; } }
+
+  .feat-group{ position:relative; padding-left:64px; margin-bottom:56px; }
+  @media (max-width:720px){ .feat-group{ padding-left:0; } }
+  .feat-group::before{
+    content:""; position:absolute; left:14px; top:6px; width:22px; height:22px; border-radius:50%;
+    background: var(--ink); border:2px solid var(--gold-bright);
+  }
+  @media (max-width:720px){ .feat-group::before{ display:none; } }
+
+  .feat-tag{ font-family:'Lora', serif; font-style:italic; color: var(--gold-bright); font-size:15px; margin-bottom:6px; }
+  .feat-group h3{ font-family:'Lora', serif; font-weight:600; font-size:24px; margin-bottom:22px; color:var(--parchment); }
+
+  .feat-grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap:16px; }
+  .feat-card{
+    background: rgba(245,230,208,0.04);
+    border:1px solid rgba(245,230,208,0.1);
+    border-radius:14px; padding:20px;
+    transition: border-color .2s, transform .2s, background .2s;
+  }
+  .feat-card:hover{ border-color: rgba(232,200,122,0.4); background: rgba(245,230,208,0.06); transform: translateY(-2px); }
+  .feat-card h4{ font-size:14.5px; font-weight:600; color: var(--parchment); margin-bottom:6px; }
+  .feat-card p{ font-size:13px; color: var(--parchment-dim); font-weight:300; line-height:1.5; }
+  .feat-card .soon{
+    display:inline-block; margin-top:10px; font-size:10.5px; letter-spacing:0.5px; text-transform:uppercase;
+    color: var(--ember); font-weight:600;
+  }
+
+  /* ---------- ABOUT / PULLQUOTE ---------- */
+  .about{
+    background: linear-gradient(180deg, transparent 0%, rgba(109,59,31,0.28) 50%, transparent 100%);
+  }
+  .about-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:60px; align-items:center; }
+  @media (max-width:800px){ .about-grid{ grid-template-columns:1fr; gap:36px; } }
+  .pullquote{
+    font-family:'Lora', serif; font-style:italic; font-weight:500;
+    font-size: clamp(22px, 2.6vw, 30px); line-height:1.45; color: var(--gold-bright);
+    border-left:3px solid var(--gold); padding-left:26px;
+  }
+  .pullquote span{ display:block; margin-top:14px; font-family:'Poppins', sans-serif; font-style:normal; font-weight:400; font-size:13px; color: var(--parchment-dim); letter-spacing:0.3px; }
+  .about-body p{ color: var(--parchment-dim); font-weight:300; font-size:15.5px; margin-bottom:16px; }
+  .about-body strong{ color: var(--parchment); font-weight:600; }
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:20px; margin-top:48px; }
+  @media (max-width:720px){ .contact-grid{ grid-template-columns:1fr; } }
+  .contact-card{
+    background: rgba(245,230,208,0.045);
+    border:1px solid rgba(245,230,208,0.12);
+    border-radius:18px; padding:32px;
+    display:flex; flex-direction:column; gap:14px;
+    transition: border-color .2s, transform .2s;
+  }
+  .contact-card:hover{ border-color: rgba(232,200,122,0.45); transform: translateY(-3px); }
+  .contact-icon{
+    width:46px; height:46px; border-radius:12px;
+    background: rgba(232,200,122,0.12); border:1px solid rgba(232,200,122,0.3);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .contact-icon svg{ width:22px; height:22px; stroke: var(--gold-bright); }
+  .contact-card h4{ font-family:'Lora', serif; font-size:19px; font-weight:600; color: var(--parchment); }
+  .contact-card p.detail{ font-size:15px; color: var(--gold-bright); font-weight:500; }
+  .contact-card p.sub{ font-size:13px; color: var(--parchment-dim); font-weight:300; }
+  .contact-card .go{ margin-top:6px; font-size:13px; font-weight:600; color: var(--parchment); display:inline-flex; align-items:center; gap:6px; }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:56px 0 40px; border-top:1px solid rgba(245,230,208,0.1);
+    text-align:center;
+  }
+  footer .fmark{ width:34px; height:34px; margin:0 auto 14px; opacity:.9; }
+  footer .fname{ font-family:'Lora', serif; font-weight:600; font-size:16px; color: var(--parchment); }
+  footer .fverse{ margin-top:14px; font-family:'Lora', serif; font-style:italic; font-size:13px; color: var(--parchment-dim); max-width:420px; margin-left:auto; margin-right:auto; line-height:1.6; }
+  footer .fcopy{ margin-top:22px; font-size:11.5px; letter-spacing:0.5px; color: rgba(245,230,208,0.45); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="brand">
+      <svg class="mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100" height="100" rx="22" fill="#6D3B1F"/>
+        <path d="M50 26c2 5-1 9-6 10-6 1-11-2-14-6 5 0 8-2 9-6 1 3 4 5 8 4-1 2 1 4 3-2z" fill="#F5E6D0" opacity="0.95"/>
+        <rect x="30" y="48" width="40" height="26" rx="3" fill="#F5E6D0"/>
+        <line x1="50" y1="48" x2="50" y2="74" stroke="#C89B64" stroke-width="1.5"/>
+        <line x1="36" y1="55" x2="46" y2="55" stroke="#C89B64" stroke-width="1"/>
+        <line x1="36" y1="61" x2="46" y2="61" stroke="#C89B64" stroke-width="1"/>
+        <line x1="36" y1="67" x2="46" y2="67" stroke="#C89B64" stroke-width="1"/>
+        <line x1="54" y1="55" x2="64" y2="55" stroke="#C89B64" stroke-width="1"/>
+        <line x1="54" y1="61" x2="64" y2="61" stroke="#C89B64" stroke-width="1"/>
+        <line x1="54" y1="67" x2="64" y2="67" stroke="#C89B64" stroke-width="1"/>
+      </svg>
+      FaithFlow
+    </a>
+    <div class="navlinks navlinks-mobile-hide">
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="nav-cta">Get notified</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="embers" id="embers"></div>
+  <div class="wrap">
+    <div class="dove-stage">
+      <svg class="dove" viewBox="0 0 200 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M100 8c4 10-2 18-12 20-12 2-22-4-28-12 10 0 16-4 18-12 2 6 8 10 16 8-2 4 2 8 6-4z" fill="#F5E6D0"/>
+        <path d="M100 20c14 4 34 4 48 -6-4 14-18 24-32 26-8 1-16-2-20-8" fill="#F5E6D0" opacity="0.9"/>
+        <path d="M100 20c-14 4-34 4-48-6 4 14 18 24 32 26 8 1 16-2 20-8" fill="#F5E6D0" opacity="0.9"/>
+        <circle cx="100" cy="10" r="7" fill="#F5E6D0"/>
+      </svg>
+      <div class="thread"></div>
+    </div>
+    <h1>Scripture, <em>reimagined</em><br>for today.</h1>
+    <p class="sub">
+      The King James Bible, offline and always with you — paired with GRACE, an AI
+      companion grounded in scripture, so you never study alone.
+    </p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="https://wa.me/27790149629" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-11.8 7.8L3 21l1.7-6.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+        Message us on WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="mailto:faithflownetwork90@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg>
+        Email FaithFlow
+      </a>
+    </div>
+    <div class="hero-note">Launching soon on Google Play</div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <div class="features-head">
+      <span class="eyebrow">Features 1:1</span>
+      <h2 class="section-title">Everything you need to read, grow, and stay close to the Word.</h2>
+      <p class="section-lede">Built around three simple rhythms — read it, grow through it, and carry it with you.</p>
+    </div>
+
+    <div class="feat-groups">
+      <div class="feat-group">
+        <div class="feat-tag">Features 1:1</div>
+        <h3>Read</h3>
+        <div class="feat-grid">
+          <div class="feat-card"><h4>KJV, offline</h4><p>The full King James Bible stored on your device — no signal needed, ever.</p></div>
+          <div class="feat-card"><h4>Every translation</h4><p>NIV, ESV, NLT and more, one tap away, streamed instantly.</p></div>
+          <div class="feat-card"><h4>Words of Christ in red</h4><p>Red-letter text throughout, the way scripture has always been set.</p></div>
+          <div class="feat-card"><h4>Full-text search</h4><p>Find any word or phrase across the entire Bible in seconds.</p></div>
+          <div class="feat-card"><h4>Cross-reference threads</h4><p>See where a verse is echoed elsewhere in scripture, without leaving the page.</p></div>
+        </div>
+      </div>
+
+      <div class="feat-group">
+        <div class="feat-tag">Features 1:2</div>
+        <h3>Grow</h3>
+        <div class="feat-grid">
+          <div class="feat-card"><h4>GRACE, your AI companion</h4><p>Ask a question about any verse and get an answer rooted in scripture, sources shown.</p></div>
+          <div class="feat-card"><h4>AI-guided prayer</h4><p>Share what's on your heart, choose a focus, and pray it through together.</p></div>
+          <div class="feat-card"><h4>Devotional generator</h4><p>A devotional crafted around whatever verse, topic, or season you're in.</p></div>
+          <div class="feat-card"><h4>Voice Talk</h4><p>Speak your questions aloud, and hear GRACE respond.</p></div>
+          <div class="feat-card"><h4>Scripture memory library</h4><p>A guided path from first read to full recall, verse by verse.</p></div>
+        </div>
+      </div>
+
+      <div class="feat-group">
+        <div class="feat-tag">Features 1:3</div>
+        <h3>Carry it with you</h3>
+        <div class="feat-grid">
+          <div class="feat-card"><h4>Faith Points</h4><p>Earn points for reading and engagement, redeemable for unlimited AI access.</p></div>
+          <div class="feat-card"><h4>Morning &amp; evening reflections</h4><p>A gentle daily rhythm, structured around how your day actually moves.</p></div>
+          <div class="feat-card"><h4>Study archive</h4><p>Every devotional, note, and quote you've kept, organized in one place.</p></div>
+          <div class="feat-card"><h4>Listen anywhere<span class="soon">Coming soon</span></h4><p>Full audio Bible with ambient background sound, for the road or for sleep.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="pullquote">
+        “In the beginning was the Word, and the Word was with God, and the Word was God.”
+        <span>John 1:1 · KJV</span>
+      </div>
+      <div class="about-body">
+        <p><strong>FaithFlow is built by FaithFlow Network</strong>, rooted in the belief
+        that scripture should be close at hand — not locked behind data costs, complicated
+        interfaces, or language only lifelong churchgoers understand.</p>
+        <p>Every feature is built with the same person in mind: someone opening their Bible
+        for the first time, or the thousandth, looking for something steady to hold onto.</p>
+        <p>That same spirit carries into our community work through
+        <strong>Hope for Bokamoso</strong>, mentoring the next generation alongside the app
+        we're building for them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Contact 1:1</span>
+    <h2 class="section-title">Questions, feedback, or just want to say hello?</h2>
+    <p class="section-lede">FaithFlow is still growing — reach out directly and a real person will get back to you.</p>
+
+    <div class="contact-grid">
+      <a class="contact-card" href="https://wa.me/27790149629" target="_blank" rel="noopener">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-11.8 7.8L3 21l1.7-6.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+        </div>
+        <h4>WhatsApp</h4>
+        <p class="detail">079 014 9629</p>
+        <p class="sub">Fastest way to reach us — message anytime.</p>
+        <span class="go">Open WhatsApp →</span>
+      </a>
+      <a class="contact-card" href="mailto:faithflownetwork90@gmail.com">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg>
+        </div>
+        <h4>Email</h4>
+        <p class="detail">faithflownetwork90@gmail.com</p>
+        <p class="sub">For partnerships, press, or anything longer-form.</p>
+        <span class="go">Send an email →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <svg class="fmark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" rx="22" fill="#6D3B1F"/>
+      <path d="M50 26c2 5-1 9-6 10-6 1-11-2-14-6 5 0 8-2 9-6 1 3 4 5 8 4-1 2 1 4 3-2z" fill="#F5E6D0" opacity="0.95"/>
+      <rect x="30" y="48" width="40" height="26" rx="3" fill="#F5E6D0"/>
+    </svg>
+    <div class="fname">FaithFlow Network</div>
+    <div class="fverse">"Thy word is a lamp unto my feet, and a light unto my path." — Psalm 119:105, KJV</div>
+    <div class="fcopy">© 2026 FaithFlow Network. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // ember particles, respects reduced motion
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const embersEl = document.getElementById('embers');
+    for (let i = 0; i < 26; i++) {
+      const e = document.createElement('div');
+      e.className = 'ember-dot';
+      e.style.left = Math.random() * 100 + '%';
+      e.style.bottom = '-10px';
+      e.style.animationDuration = (7 + Math.random() * 7) + 's';
+      e.style.animationDelay = (Math.random() * 9) + 's';
+      embersEl.appendChild(e);
+    }
+  }
+</script>
+
+</body>
+</html>
