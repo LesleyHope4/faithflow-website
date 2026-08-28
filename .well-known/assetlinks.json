@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.faithflowai.bible",
+      "sha256_cert_fingerprints":
+        ["F7:E6:77:C3:6D:16:A3:B8:CC:5D:22:08:7A:8E:06:AD:C7:17:56:AE:AC:4B:18:E7:C7:B7:F4:7B:85:35:D1:28"]
+    }
+  }
+]
