@@ -21,6 +21,11 @@
     --reader-max: 720px;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
+  /* Several elements below set an explicit `display` (flex, etc.) for when
+     they're shown, which otherwise defeats the `hidden` attribute per the
+     CSS cascade (author display always beats the UA [hidden] rule). This
+     keeps `hidden` authoritative everywhere in this page. */
+  [hidden]{ display:none !important; }
   html{scroll-behavior:smooth;}
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
@@ -381,7 +386,7 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
   import {
     getAuth, onAuthStateChanged, signInAnonymously,
-    GoogleAuthProvider, signInWithPopup, linkWithPopup,
+    GoogleAuthProvider, signInWithRedirect, linkWithRedirect, getRedirectResult,
     signInWithEmailAndPassword, createUserWithEmailAndPassword,
     EmailAuthProvider, linkWithCredential, signOut
   } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
@@ -436,6 +441,7 @@
   function closeAuthModal() { authModal.hidden = true; }
   modalCloseBtn.addEventListener('click', closeAuthModal);
   authModal.addEventListener('click', (e) => { if (e.target === authModal) closeAuthModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !authModal.hidden) closeAuthModal(); });
   guestUpgradeBtn.addEventListener('click', openAuthModal);
 
   modalToggleBtn.addEventListener('click', () => {
@@ -464,18 +470,49 @@
     }
   }
 
+  // Google sign-in uses a redirect instead of a popup (more reliable across
+  // browsers/popup blockers). The flow spans a full page navigation, so we
+  // stash intent in sessionStorage and finish the job in
+  // completePendingGoogleRedirect() below, once the page reloads.
+  const REDIRECT_INTENT_KEY = 'faithflow-google-redirect-intent';
+
   googleSignInBtn.addEventListener('click', async () => {
     modalError.textContent = '';
     try {
-      await upgradeOrSignIn(
-        () => linkWithPopup(auth.currentUser, googleProvider),
-        () => signInWithPopup(auth, googleProvider)
-      );
-      closeAuthModal();
+      if (currentUser && currentUser.isAnonymous) {
+        sessionStorage.setItem(REDIRECT_INTENT_KEY, 'link');
+        await linkWithRedirect(auth.currentUser, googleProvider);
+      } else {
+        sessionStorage.setItem(REDIRECT_INTENT_KEY, 'signin');
+        await signInWithRedirect(auth, googleProvider);
+      }
+      // Browser is navigating away now; nothing else runs here.
     } catch (err) {
+      sessionStorage.removeItem(REDIRECT_INTENT_KEY);
       modalError.textContent = err.message || 'Sign-in failed. Please try again.';
     }
   });
+
+  async function completePendingGoogleRedirect() {
+    const intent = sessionStorage.getItem(REDIRECT_INTENT_KEY);
+    if (!intent) return;
+    try {
+      const result = await getRedirectResult(auth);
+      sessionStorage.removeItem(REDIRECT_INTENT_KEY);
+      if (result) closeAuthModal();
+    } catch (err) {
+      if (intent === 'link' && (err.code === 'auth/credential-already-in-use' || err.code === 'auth/email-already-in-use')) {
+        // Anonymous account tried to claim a Google identity that's already a
+        // real account elsewhere - fall back to signing into that account.
+        sessionStorage.setItem(REDIRECT_INTENT_KEY, 'signin');
+        await signInWithRedirect(auth, googleProvider);
+        return;
+      }
+      sessionStorage.removeItem(REDIRECT_INTENT_KEY);
+      openAuthModal();
+      modalError.textContent = err.message || 'Sign-in failed. Please try again.';
+    }
+  }
 
   emailForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -577,6 +614,8 @@
       showAdsIfEligible(false);
     }
   });
+
+  completePendingGoogleRedirect();
 </script>
 
 <script type="module">
