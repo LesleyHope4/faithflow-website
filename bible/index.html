@@ -503,7 +503,14 @@
     try {
       const result = await getRedirectResult(auth);
       sessionStorage.removeItem(REDIRECT_INTENT_KEY);
-      if (result) closeAuthModal();
+      if (result) {
+        closeAuthModal();
+      } else if (!auth.currentUser) {
+        // Stale intent flag with nothing actually pending (e.g. a manual
+        // reload mid-flow) - fall back to a normal anonymous session
+        // instead of leaving onAuthStateChanged's guard blocked forever.
+        try { await signInAnonymously(auth); } catch (e) { console.error(e); }
+      }
     } catch (err) {
       if (intent === 'link' && (err.code === 'auth/credential-already-in-use' || err.code === 'auth/email-already-in-use')) {
         // Anonymous account tried to claim a Google identity that's already a
@@ -598,6 +605,11 @@
   onAuthStateChanged(auth, async (user) => {
     currentUser = user;
     if (!user) {
+      // A Google redirect may still be resolving (getRedirectResult() in
+      // completePendingGoogleRedirect() hasn't run/settled yet). Signing in
+      // anonymously here would race it and silently discard a successful
+      // Google login the moment it lands, reverting to a guest session.
+      if (sessionStorage.getItem(REDIRECT_INTENT_KEY)) return;
       // No session yet — start as anonymous so browsing works immediately.
       try { await signInAnonymously(auth); } catch (e) { console.error(e); }
       return;
