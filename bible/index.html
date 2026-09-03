@@ -216,8 +216,13 @@
   }
   .modal h3{ font-family:'Lora', serif; font-size:19px; margin-bottom:6px; color: var(--parchment); }
   .modal p.sub{ font-size:12.5px; color: var(--parchment-dim); margin-bottom:20px; }
-  .modal-close{ float:right; font-size:20px; color: var(--parchment-dim); line-height:1; }
-  .modal-close:hover{ color: var(--gold-bright); }
+  .modal-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+  .modal-close{
+    flex-shrink:0; font-size:22px; color: var(--parchment-dim); line-height:1;
+    width:32px; height:32px; display:flex; align-items:center; justify-content:center;
+    border-radius:8px; margin:-6px -6px 0 0;
+  }
+  .modal-close:hover{ color: var(--gold-bright); background: rgba(245,230,208,0.08); }
   .field{ margin-bottom:12px; }
   .field label{ display:block; font-size:11.5px; color: var(--gold); margin-bottom:5px; text-transform:uppercase; letter-spacing:.5px; }
   .field input{
@@ -339,8 +344,10 @@
 <!-- Auth modal -->
 <div id="authModal" class="modal-overlay" hidden>
   <div class="modal">
-    <button class="modal-close" id="modalCloseBtn" aria-label="Close">&times;</button>
-    <h3 id="modalTitle">Save your account</h3>
+    <div class="modal-head">
+      <h3 id="modalTitle">Save your account</h3>
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close">&times;</button>
+    </div>
     <p class="sub" id="modalSub">Sign in to keep the same account across FaithFlow Web and the mobile app.</p>
 
     <button class="btn google-btn" id="googleSignInBtn">
