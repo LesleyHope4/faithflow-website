@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FaithFlow Web — Read the King James Bible Online</title>
 <meta name="description" content="Read the full King James Bible online, free, with FaithFlow Web. Sign in to pick up where you left off, or browse as a guest.">
+<link rel="canonical" href="https://faithflownetwork.co.za/bible/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -147,15 +148,17 @@
   #bookSelect{ flex:2; min-width:120px; }
   #chapterSelect{ flex:1; min-width:70px; }
   .chapter-nav{ display:flex; gap:6px; margin-left:auto; }
-  .chapter-nav button{
+  .chapter-nav a{
     width:36px; height:36px; border-radius:9px;
     background: rgba(245,230,208,0.06); border:1px solid rgba(245,230,208,0.2);
     display:flex; align-items:center; justify-content:center; font-size:15px;
     transition: background .15s, border-color .15s;
+    color: inherit; text-decoration:none;
   }
-  .chapter-nav button:hover:not(:disabled){ background: rgba(245,230,208,0.12); border-color: rgba(232,200,122,0.4); }
-  .chapter-nav button:disabled{ opacity:.3; cursor:default; }
-  .reader-toolbar.bottom button{ width:auto; padding:10px 20px; border-radius:100px; gap:6px; font-size:13px; font-weight:600; }
+  .chapter-nav a:hover:not([aria-disabled="true"]){ background: rgba(245,230,208,0.12); border-color: rgba(232,200,122,0.4); }
+  .chapter-nav a[aria-disabled="true"]{ opacity:.3; cursor:default; pointer-events:none; }
+  .reader-toolbar.bottom a{ width:auto; padding:10px 20px; border-radius:100px; gap:6px; font-size:13px; font-weight:600; }
+  .reader-toolbar.bottom a[aria-disabled="true"]{ opacity:.3; cursor:default; pointer-events:none; }
 
   .verse-container{ padding-top:8px; min-height:40vh; }
   .chapter-heading{
@@ -254,7 +257,7 @@
 
 <nav>
   <div class="wrap">
-    <a href="../index.html" class="brand">
+    <a href="/index.html" class="brand">
       <svg class="mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <rect width="100" height="100" rx="22" fill="#6D3B1F"/>
         <path d="M50 26c2 5-1 9-6 10-6 1-11-2-14-6 5 0 8-2 9-6 1 3 4 5 8 4-1 2 1 4 3-2z" fill="#F5E6D0" opacity="0.95"/>
@@ -263,7 +266,7 @@
       FaithFlow <span class="sep">/</span> <span class="sub">Web</span>
     </a>
     <div class="nav-right">
-      <a href="../index.html" class="nav-link hide-mobile">Home</a>
+      <a href="/index.html" class="nav-link hide-mobile">Home</a>
       <a href="#getapp" class="nav-link hide-mobile">Get the app</a>
       <div id="authArea"></div>
     </div>
@@ -288,8 +291,8 @@
       <select id="bookSelect" aria-label="Book"></select>
       <select id="chapterSelect" aria-label="Chapter"></select>
       <div class="chapter-nav">
-        <button id="prevBtn" aria-label="Previous chapter" title="Previous chapter">‹</button>
-        <button id="nextBtn" aria-label="Next chapter" title="Next chapter">›</button>
+        <a id="prevBtn" href="#" aria-label="Previous chapter" title="Previous chapter">‹</a>
+        <a id="nextBtn" href="#" aria-label="Next chapter" title="Next chapter">›</a>
       </div>
     </div>
 
@@ -315,8 +318,8 @@
     </article>
 
     <div class="reader-toolbar bottom">
-      <button id="prevBtn2" class="btn btn-ghost">‹ Previous</button>
-      <button id="nextBtn2" class="btn btn-primary">Next chapter ›</button>
+      <a id="prevBtn2" class="btn btn-ghost" href="#">‹ Previous</a>
+      <a id="nextBtn2" class="btn btn-primary" href="#">Next chapter ›</a>
     </div>
   </section>
 
@@ -344,9 +347,9 @@
 <footer>
   <div class="wrap">
     <div class="flegal">
-      <a href="../privacy-policy.html">Privacy Policy</a>·
-      <a href="../terms-conditions.html">Terms &amp; Conditions</a>·
-      <a href="../data-deletion.html">Data Deletion</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>·
+      <a href="/terms-conditions.html">Terms &amp; Conditions</a>·
+      <a href="/data-deletion.html">Data Deletion</a>
     </div>
     <div class="fkjv">Scripture text: King James Version (public domain).</div>
     <div class="fcopy">© 2026 FaithFlow Network. All rights reserved.</div>
@@ -654,9 +657,57 @@
   let current = { bookIndex: 0, chapter: 1 };
 
   const STORAGE_KEY = 'faithflow-web-last-read';
+  const SITE_ORIGIN = 'https://faithflownetwork.co.za';
+
+  // Keep in sync with slugify() in build-bible-pages.js — both must agree on
+  // the same book-name -> URL-slug mapping for links to resolve correctly.
+  function slugify(name) {
+    return name.toLowerCase().replace(/\s+/g, '-');
+  }
+
+  function chapterPath(bookIndex, chapter) {
+    return `/bible/${slugify(books[bookIndex].name)}/${chapter}/`;
+  }
+
+  function chapterMeta(bookIndex, chapter) {
+    const book = books[bookIndex];
+    return {
+      title: `${book.name} ${chapter} KJV — Read Online Free | FaithFlow`,
+      description: `Read ${book.name} chapter ${chapter} (King James Version) online free at FaithFlow. Full text with verse numbers — no sign-up required.`,
+    };
+  }
+
+  function prevTarget() {
+    if (current.chapter > 1) return { bookIndex: current.bookIndex, chapter: current.chapter - 1 };
+    if (current.bookIndex > 0) {
+      const pb = current.bookIndex - 1;
+      return { bookIndex: pb, chapter: books[pb].chapters };
+    }
+    return null;
+  }
+
+  function nextTarget() {
+    const book = books[current.bookIndex];
+    if (current.chapter < book.chapters) return { bookIndex: current.bookIndex, chapter: current.chapter + 1 };
+    if (current.bookIndex < books.length - 1) return { bookIndex: current.bookIndex + 1, chapter: 1 };
+    return null;
+  }
+
+  // Reads the current /bible/<slug>/<chapter>/ URL, if any, back into a
+  // {bookIndex, chapter} state. Returns null for the bare /bible/ root (or
+  // anything unrecognized), so callers fall back to localStorage/default.
+  function parseLocation() {
+    const parts = location.pathname.replace(/^\/bible\/?/, '').split('/').filter(Boolean);
+    if (parts.length === 0) return null;
+    const bookIndex = books.findIndex(b => slugify(b.name) === parts[0]);
+    if (bookIndex === -1) return null;
+    const chapter = parts[1] ? parseInt(parts[1], 10) : 1;
+    if (!Number.isInteger(chapter) || chapter < 1 || chapter > books[bookIndex].chapters) return null;
+    return { bookIndex, chapter };
+  }
 
   async function loadManifest() {
-    const res = await fetch('data/books.json');
+    const res = await fetch('/bible/data/books.json');
     books = await res.json();
   }
 
@@ -692,7 +743,7 @@
   async function fetchBook(bookIndex) {
     const meta = books[bookIndex];
     if (bookCache.has(meta.file)) return bookCache.get(meta.file);
-    const res = await fetch(`data/kjv/${meta.file}.json`);
+    const res = await fetch(`/bible/data/kjv/${meta.file}.json`);
     const data = await res.json();
     bookCache.set(meta.file, data);
     return data;
@@ -709,10 +760,16 @@
   }
 
   function updateNavButtonStates() {
-    const atFirst = current.bookIndex === 0 && current.chapter === 1;
-    const atLast = current.bookIndex === books.length - 1 && current.chapter === books[current.bookIndex].chapters;
-    prevBtns.forEach(b => b.disabled = atFirst);
-    nextBtns.forEach(b => { b.disabled = atLast; });
+    const prev = prevTarget();
+    const next = nextTarget();
+    prevBtns.forEach(a => {
+      if (prev) { a.href = chapterPath(prev.bookIndex, prev.chapter); a.removeAttribute('aria-disabled'); }
+      else { a.href = '#'; a.setAttribute('aria-disabled', 'true'); }
+    });
+    nextBtns.forEach(a => {
+      if (next) { a.href = chapterPath(next.bookIndex, next.chapter); a.removeAttribute('aria-disabled'); }
+      else { a.href = '#'; a.setAttribute('aria-disabled', 'true'); }
+    });
   }
 
   async function renderChapter(pushState = true) {
@@ -754,8 +811,15 @@
     verseContainer.appendChild(frag);
     updateNavButtonStates();
 
+    const path = chapterPath(current.bookIndex, current.chapter);
+    const { title, description } = chapterMeta(current.bookIndex, current.chapter);
+    document.title = title;
+    document.querySelector('meta[name="description"]')?.setAttribute('content', description);
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', SITE_ORIGIN + path);
+
     if (pushState) {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(current));
+      if (location.pathname !== path) history.pushState(current, '', path);
     }
     window.scrollTo({ top: document.querySelector('.bible-hero').offsetHeight, behavior: 'auto' });
   }
@@ -773,25 +837,22 @@
   }
 
   function goPrev() {
-    if (current.chapter > 1) {
-      goToChapter(current.bookIndex, current.chapter - 1);
-    } else if (current.bookIndex > 0) {
-      const prevBook = current.bookIndex - 1;
-      goToChapter(prevBook, books[prevBook].chapters);
-    }
+    const t = prevTarget();
+    if (t) goToChapter(t.bookIndex, t.chapter);
   }
 
   function goNext() {
-    const book = books[current.bookIndex];
-    if (current.chapter < book.chapters) {
-      goToChapter(current.bookIndex, current.chapter + 1);
-    } else if (current.bookIndex < books.length - 1) {
-      goToChapter(current.bookIndex + 1, 1);
-    }
+    const t = nextTarget();
+    if (t) goToChapter(t.bookIndex, t.chapter);
   }
 
-  prevBtns.forEach(b => b.addEventListener('click', goPrev));
-  nextBtns.forEach(b => b.addEventListener('click', goNext));
+  prevBtns.forEach(b => b.addEventListener('click', (e) => { e.preventDefault(); goPrev(); }));
+  nextBtns.forEach(b => b.addEventListener('click', (e) => { e.preventDefault(); goNext(); }));
+
+  window.addEventListener('popstate', () => {
+    const parsed = parseLocation();
+    if (parsed) { current = parsed; renderChapter(false); }
+  });
 
   bookSelect.addEventListener('change', () => {
     goToChapter(Number(bookSelect.value), 1);
@@ -804,13 +865,19 @@
     await loadManifest();
     populateBookSelect();
 
-    let start = { bookIndex: 0, chapter: 1 };
-    try {
-      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
-      if (saved && books[saved.bookIndex] && saved.chapter <= books[saved.bookIndex].chapters) {
-        start = saved;
-      }
-    } catch (e) { /* ignore malformed local storage */ }
+    // A direct hit on /bible/<slug>/<chapter>/ wins over the last-read
+    // position — someone followed a specific link (or a search result) and
+    // should land on that chapter, not get redirected to where they left off.
+    let start = parseLocation();
+    if (!start) {
+      start = { bookIndex: 0, chapter: 1 };
+      try {
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+        if (saved && books[saved.bookIndex] && saved.chapter <= books[saved.bookIndex].chapters) {
+          start = saved;
+        }
+      } catch (e) { /* ignore malformed local storage */ }
+    }
 
     current = start;
     populateChapterSelect(current.bookIndex);

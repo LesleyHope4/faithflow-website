@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ezekiel 13 KJV — Read Online Free | FaithFlow</title>
+<meta name="description" content="Read Ezekiel chapter 13 (King James Version) online free at FaithFlow. Full text with verse numbers — no sign-up required.">
+<link rel="canonical" href="https://faithflownetwork.co.za/bible/ezekiel/13/">
+<link rel="prev" href="https://faithflownetwork.co.za/bible/ezekiel/12/">
+<link rel="next" href="https://faithflownetwork.co.za/bible/ezekiel/14/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #3E2213;
+    --brown: #6D3B1F;
+    --brown-light: #8A4F2A;
+    --parchment: #F5E6D0;
+    --parchment-dim: #E8D6B8;
+    --gold: #C89B64;
+    --gold-bright: #E8C87A;
+    --ember: #C97B84;
+    --max: 1120px;
+    --reader-max: 720px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  /* Several elements below set an explicit `display` (flex, etc.) for when
+     they're shown, which otherwise defeats the `hidden` attribute per the
+     CSS cascade (author display always beats the UA [hidden] rule). This
+     keeps `hidden` authoritative everywhere in this page. */
+  [hidden]{ display:none !important; }
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+  body{
+    font-family:'Poppins', sans-serif;
+    background: var(--ink);
+    color: var(--parchment);
+    line-height:1.6;
+    min-height:100vh;
+  }
+  a{color:inherit; text-decoration:none;}
+  button{font-family:inherit; cursor:pointer; border:none; background:none; color:inherit;}
+  img{max-width:100%; display:block;}
+  :focus-visible{ outline:2px solid var(--gold-bright); outline-offset:3px; }
+
+  .wrap{ max-width:var(--max); margin:0 auto; padding:0 20px; }
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky; top:0; left:0; right:0; z-index:60;
+    background: rgba(62,34,19,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid rgba(232,200,122,0.12);
+  }
+  nav .wrap{ display:flex; align-items:center; justify-content:space-between; height:64px; gap:12px; }
+  .brand{ display:flex; align-items:center; gap:9px; font-family:'Lora', serif; font-weight:700; font-size:17px; flex-shrink:0; }
+  .brand .mark{ width:24px; height:24px; }
+  .brand .sep{ color: var(--gold); font-weight:400; opacity:.6; }
+  .brand .sub{ color: var(--gold-bright); font-weight:600; }
+
+  .nav-right{ display:flex; align-items:center; gap:10px; }
+  .nav-link{ font-size:13.5px; color: var(--parchment-dim); }
+  .nav-link:hover{ color: var(--gold-bright); }
+  @media (max-width:560px){ .nav-link.hide-mobile{ display:none; } }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:7px;
+    padding:9px 16px; border-radius:100px; font-weight:600; font-size:13px;
+    transition: transform .15s, box-shadow .15s, background .15s;
+    white-space:nowrap;
+  }
+  .btn-primary{ background: var(--gold-bright); color: var(--ink); }
+  .btn-primary:hover{ transform: translateY(-1px); box-shadow: 0 8px 18px -8px rgba(232,200,122,0.55); }
+  .btn-ghost{ background: rgba(245,230,208,0.06); color: var(--parchment); border:1px solid rgba(245,230,208,0.22); }
+  .btn-ghost:hover{ background: rgba(245,230,208,0.12); }
+  .btn-sm{ padding:7px 13px; font-size:12.5px; }
+  .btn[aria-disabled="true"]{ cursor:default; opacity:.7; }
+  .btn[aria-disabled="true"]:hover{ background: rgba(245,230,208,0.06); transform:none; box-shadow:none; }
+
+  .user-chip{
+    display:flex; align-items:center; gap:8px;
+    padding:6px 10px 6px 6px; border-radius:100px;
+    background: rgba(245,230,208,0.06); border:1px solid rgba(245,230,208,0.14);
+    font-size:12.5px; color: var(--parchment-dim);
+    position:relative;
+  }
+  .user-chip .avatar{
+    width:26px; height:26px; border-radius:50%; background: var(--brown-light);
+    display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11.5px;
+    color: var(--parchment); flex-shrink:0; overflow:hidden;
+  }
+  .user-chip .avatar img{ width:100%; height:100%; object-fit:cover; }
+  .user-menu{
+    position:absolute; top:calc(100% + 8px); right:0; min-width:200px;
+    background: #2C170D; border:1px solid rgba(245,230,208,0.14); border-radius:12px;
+    padding:8px; box-shadow: 0 16px 40px -12px rgba(0,0,0,0.6);
+    display:flex; flex-direction:column; gap:2px;
+  }
+  .user-menu button, .user-menu a{
+    display:block; width:100%; text-align:left; padding:9px 10px; border-radius:8px;
+    font-size:13px; color: var(--parchment-dim); transition: background .15s, color .15s;
+  }
+  .user-menu button:hover, .user-menu a:hover{ background: rgba(245,230,208,0.08); color: var(--parchment); }
+  .user-menu .menu-note{ padding:8px 10px 4px; font-size:11px; color: var(--gold); text-transform:uppercase; letter-spacing:.5px; }
+  .user-menu hr{ border:none; border-top:1px solid rgba(245,230,208,0.1); margin:6px 0; }
+
+  /* ---------- HERO ---------- */
+  .bible-hero{
+    padding:44px 0 28px;
+    text-align:center;
+    background: radial-gradient(90% 100% at 50% 0%, rgba(138,79,42,0.28) 0%, transparent 65%);
+  }
+  .eyebrow{
+    font-weight:600; font-size:11.5px; letter-spacing:2px; text-transform:uppercase; color: var(--gold);
+    display:inline-block; margin-bottom:10px;
+  }
+  .bible-hero h1{
+    font-family:'Lora', serif; font-weight:600; font-size: clamp(24px, 4vw, 34px);
+    color: var(--parchment); margin-bottom:8px;
+  }
+  .bible-hero p{ color: var(--parchment-dim); font-size:14px; font-weight:300; max-width:480px; margin:0 auto; }
+  .guest-banner{
+    max-width:560px; margin:18px auto 0; padding:10px 16px; border-radius:10px;
+    background: rgba(232,200,122,0.08); border:1px solid rgba(232,200,122,0.25);
+    font-size:12.5px; color: var(--gold-bright); display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap;
+  }
+  .guest-banner button{ font-weight:600; text-decoration:underline; text-underline-offset:2px; }
+
+  /* ---------- READER ---------- */
+  .reader-shell{ max-width: var(--reader-max); margin:0 auto; padding:0 18px 60px; }
+
+  .reader-toolbar{
+    position:sticky; top:64px; z-index:40;
+    display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+    padding:12px 0; background: var(--ink);
+  }
+  .reader-toolbar.bottom{ position:static; justify-content:center; padding:28px 0 0; border-top:1px solid rgba(245,230,208,0.1); margin-top:20px; }
+  select{
+    font-family:'Poppins', sans-serif; font-size:13.5px; font-weight:500;
+    background: rgba(245,230,208,0.06); color: var(--parchment);
+    border:1px solid rgba(245,230,208,0.2); border-radius:10px; padding:9px 10px;
+    appearance:none; -webkit-appearance:none;
+  }
+  select:focus{ border-color: var(--gold-bright); }
+  select option{ background: #2C170D; color: var(--parchment); }
+  select optgroup{ background: #2C170D; color: var(--gold-bright); font-weight:600; font-style:normal; }
+  #bookSelect{ flex:2; min-width:120px; }
+  #chapterSelect{ flex:1; min-width:70px; }
+  .chapter-nav{ display:flex; gap:6px; margin-left:auto; }
+  .chapter-nav a{
+    width:36px; height:36px; border-radius:9px;
+    background: rgba(245,230,208,0.06); border:1px solid rgba(245,230,208,0.2);
+    display:flex; align-items:center; justify-content:center; font-size:15px;
+    transition: background .15s, border-color .15s;
+    color: inherit; text-decoration:none;
+  }
+  .chapter-nav a:hover:not([aria-disabled="true"]){ background: rgba(245,230,208,0.12); border-color: rgba(232,200,122,0.4); }
+  .chapter-nav a[aria-disabled="true"]{ opacity:.3; cursor:default; pointer-events:none; }
+  .reader-toolbar.bottom a{ width:auto; padding:10px 20px; border-radius:100px; gap:6px; font-size:13px; font-weight:600; }
+  .reader-toolbar.bottom a[aria-disabled="true"]{ opacity:.3; cursor:default; pointer-events:none; }
+
+  .verse-container{ padding-top:8px; min-height:40vh; }
+  .chapter-heading{
+    font-family:'Lora', serif; font-weight:700; font-size:22px; color: var(--gold-bright);
+    margin-bottom:18px; text-align:center;
+  }
+  .verse{
+    display:flex; gap:12px; padding:9px 10px; border-radius:10px; cursor:pointer;
+    transition: background .15s;
+    font-family:'Lora', serif; font-size:16.5px; line-height:1.7; color: var(--parchment);
+  }
+  .verse:hover{ background: rgba(245,230,208,0.045); }
+  .verse.selected{ background: rgba(232,200,122,0.12); }
+  .verse .vnum{
+    flex-shrink:0; width:22px; text-align:right; font-family:'Poppins', sans-serif;
+    font-size:11.5px; font-weight:600; color: var(--gold); padding-top:3px;
+  }
+  .verse .vtext{ flex:1; }
+  .verse-actions{
+    display:none; gap:8px; margin:4px 10px 10px 44px; font-size:12px;
+  }
+  .verse.selected + .verse-actions{ display:flex; }
+  .verse-actions button{
+    padding:5px 11px; border-radius:100px; background: rgba(245,230,208,0.08);
+    border:1px solid rgba(245,230,208,0.2); font-size:11.5px; color: var(--parchment-dim);
+  }
+  .verse-actions button:hover{ color: var(--gold-bright); border-color: rgba(232,200,122,0.4); }
+
+  .skeleton{ display:flex; flex-direction:column; gap:10px; padding-top:4px; }
+  .skel-line{ height:16px; border-radius:6px; background: rgba(245,230,208,0.06); animation: pulse 1.3s ease-in-out infinite; }
+  @keyframes pulse{ 0%,100%{opacity:.4;} 50%{opacity:.9;} }
+
+  /* ---------- AD SLOT ---------- */
+  .ad-slot{ margin:18px 0; text-align:center; min-height:0; }
+  .ad-slot .ad-label{ font-size:10px; letter-spacing:1px; text-transform:uppercase; color: rgba(245,230,208,0.35); margin-bottom:6px; }
+
+  /* ---------- UPSELL ---------- */
+  .upsell{ padding:20px 0 70px; }
+  .upsell-card{
+    max-width:var(--reader-max); margin:0 auto; padding:30px 26px;
+    background: linear-gradient(160deg, rgba(232,200,122,0.1), rgba(245,230,208,0.03));
+    border:1px solid rgba(232,200,122,0.25); border-radius:20px; text-align:center;
+  }
+  .upsell-card h3{ font-family:'Lora', serif; font-size:20px; margin-bottom:10px; color: var(--parchment); }
+  .upsell-card p{ font-size:13.5px; color: var(--parchment-dim); font-weight:300; max-width:440px; margin:0 auto 18px; }
+  .upsell-list{ display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-bottom:20px; }
+  .upsell-list span{
+    font-size:11.5px; padding:6px 12px; border-radius:100px; background: rgba(245,230,208,0.06);
+    border:1px solid rgba(245,230,208,0.14); color: var(--gold-bright);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{ padding:40px 0 32px; border-top:1px solid rgba(245,230,208,0.1); text-align:center; }
+  footer .fcopy{ font-size:11px; letter-spacing:0.5px; color: rgba(245,230,208,0.4); margin-top:8px; }
+  footer .flegal a{ color: var(--parchment-dim); margin:0 8px; font-size:12.5px; }
+  footer .flegal a:hover{ color: var(--gold-bright); }
+  footer .fkjv{ font-size:11.5px; color: rgba(245,230,208,0.4); margin-top:10px; }
+
+  /* ---------- MODAL ---------- */
+  .modal-overlay{
+    position:fixed; inset:0; z-index:100; background: rgba(20,10,5,0.72);
+    display:flex; align-items:center; justify-content:center; padding:20px;
+  }
+  .modal{
+    width:100%; max-width:380px; background:#2C170D; border:1px solid rgba(245,230,208,0.14);
+    border-radius:18px; padding:28px 24px;
+  }
+  .modal h3{ font-family:'Lora', serif; font-size:19px; margin-bottom:6px; color: var(--parchment); }
+  .modal p.sub{ font-size:12.5px; color: var(--parchment-dim); margin-bottom:20px; }
+  .modal-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+  .modal-close{
+    flex-shrink:0; font-size:22px; color: var(--parchment-dim); line-height:1;
+    width:32px; height:32px; display:flex; align-items:center; justify-content:center;
+    border-radius:8px; margin:-6px -6px 0 0;
+  }
+  .modal-close:hover{ color: var(--gold-bright); background: rgba(245,230,208,0.08); }
+  .field{ margin-bottom:12px; }
+  .field label{ display:block; font-size:11.5px; color: var(--gold); margin-bottom:5px; text-transform:uppercase; letter-spacing:.5px; }
+  .field input{
+    width:100%; padding:10px 12px; border-radius:10px; font-size:14px;
+    background: rgba(245,230,208,0.06); border:1px solid rgba(245,230,208,0.2); color: var(--parchment);
+    font-family:'Poppins', sans-serif;
+  }
+  .field input:focus{ border-color: var(--gold-bright); }
+  .modal .btn{ width:100%; justify-content:center; margin-top:4px; }
+  .modal-divider{ display:flex; align-items:center; gap:10px; margin:16px 0; font-size:11px; color: rgba(245,230,208,0.4); text-transform:uppercase; letter-spacing:.5px; }
+  .modal-divider::before, .modal-divider::after{ content:""; flex:1; height:1px; background: rgba(245,230,208,0.14); }
+  .modal-toggle{ text-align:center; margin-top:16px; font-size:12.5px; color: var(--parchment-dim); }
+  .modal-toggle button{ color: var(--gold-bright); font-weight:600; }
+  .modal-error{ font-size:12px; color: var(--ember); margin-top:8px; min-height:14px; }
+  .google-btn{ width:100%; justify-content:center; background:#fff; color:#3c4043; gap:10px; }
+  .google-btn:hover{ background:#f5f5f5; transform:none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="/index.html" class="brand">
+      <svg class="mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100" height="100" rx="22" fill="#6D3B1F"/>
+        <path d="M50 26c2 5-1 9-6 10-6 1-11-2-14-6 5 0 8-2 9-6 1 3 4 5 8 4-1 2 1 4 3-2z" fill="#F5E6D0" opacity="0.95"/>
+        <rect x="30" y="48" width="40" height="26" rx="3" fill="#F5E6D0"/>
+      </svg>
+      FaithFlow <span class="sep">/</span> <span class="sub">Web</span>
+    </a>
+    <div class="nav-right">
+      <a href="/index.html" class="nav-link hide-mobile">Home</a>
+      <a href="#getapp" class="nav-link hide-mobile">Get the app</a>
+      <div id="authArea"></div>
+    </div>
+  </div>
+</nav>
+
+<header class="bible-hero">
+  <div class="wrap">
+    <span class="eyebrow">FaithFlow Web</span>
+    <h1>Read the King James Bible, free.</h1>
+    <p>Browse any book, chapter, and verse — right here in your browser.</p>
+    <div id="guestBanner" class="guest-banner" hidden>
+      <span>Browsing as a guest — your place won't be saved on other devices.</span>
+      <button id="guestUpgradeBtn">Save your account →</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="reader-shell">
+    <div class="reader-toolbar">
+      <select id="bookSelect" aria-label="Book"></select>
+      <select id="chapterSelect" aria-label="Chapter"></select>
+      <div class="chapter-nav">
+        <a id="prevBtn" href="/bible/ezekiel/12/" aria-label="Previous chapter" title="Previous chapter">‹</a>
+        <a id="nextBtn" href="/bible/ezekiel/14/" aria-label="Next chapter" title="Next chapter">›</a>
+      </div>
+    </div>
+
+    <!-- TODO: replace data-ad-slot with a real ad unit ID from AdSense (create a "Display ad" unit for this page). -->
+    <div id="adSlotTop" class="ad-slot" hidden>
+      <div class="ad-label">Advertisement</div>
+      <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-5919457083325799"
+        data-ad-slot="0000000000"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    </div>
+
+    <article id="verseContainer" class="verse-container" aria-live="polite">
+      <div class="chapter-heading">Ezekiel 13</div>
+      <div class="verse"><span class="vnum">1</span><span class="vtext">And the word of the LORD came unto me, saying,</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">2</span><span class="vtext">Son of man, prophesy against the prophets of Israel that prophesy, and say thou unto them that prophesy out of their own hearts, Hear ye the word of the LORD;</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">3</span><span class="vtext">Thus saith the Lord GOD; Woe unto the foolish prophets, that follow their own spirit, and have seen nothing!</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">4</span><span class="vtext">O Israel, thy prophets are like the foxes in the deserts.</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">5</span><span class="vtext">Ye have not gone up into the gaps, neither made up the hedge for the house of Israel to stand in the battle in the day of the LORD.</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">6</span><span class="vtext">They have seen vanity and lying divination, saying, The LORD saith: and the LORD hath not sent them: and they have made others to hope that they would confirm the word.</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">7</span><span class="vtext">Have ye not seen a vain vision, and have ye not spoken a lying divination, whereas ye say, The LORD saith it; albeit I have not spoken?</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">8</span><span class="vtext">Therefore thus saith the Lord GOD; Because ye have spoken vanity, and seen lies, therefore, behold, I am against you, saith the Lord GOD.</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">9</span><span class="vtext">And mine hand shall be upon the prophets that see vanity, and that divine lies: they shall not be in the assembly of my people, neither shall they be written in the writing of the house of Israel, neither shall they enter into the land of Israel; and ye shall know that I am the Lord GOD.</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">10</span><span class="vtext">Because, even because they have seduced my people, saying, Peace; and there was no peace; and one built up a wall, and, lo, others daubed it with untempered morter:</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">11</span><span class="vtext">Say unto them which daub it with untempered morter, that it shall fall: there shall be an overflowing shower; and ye, O great hailstones, shall fall; and a stormy wind shall rend it.</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">12</span><span class="vtext">Lo, when the wall is fallen, shall it not be said unto you, Where is the daubing wherewith ye have daubed it?</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">13</span><span class="vtext">Therefore thus saith the Lord GOD; I will even rend it with a stormy wind in my fury; and there shall be an overflowing shower in mine anger, and great hailstones in my fury to consume it.</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">14</span><span class="vtext">So will I break down the wall that ye have daubed with untempered morter, and bring it down to the ground, so that the foundation thereof shall be discovered, and it shall fall, and ye shall be consumed in the midst thereof: and ye shall know that I am the LORD.</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">15</span><span class="vtext">Thus will I accomplish my wrath upon the wall, and upon them that have daubed it with untempered morter, and will say unto you, The wall is no more, neither they that daubed it;</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">16</span><span class="vtext">To wit, the prophets of Israel which prophesy concerning Jerusalem, and which see visions of peace for her, and there is no peace, saith the Lord GOD.</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">17</span><span class="vtext">Likewise, thou son of man, set thy face against the daughters of thy people, which prophesy out of their own heart; and prophesy thou against them,</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">18</span><span class="vtext">And say, Thus saith the Lord GOD; Woe to the women that sew pillows to all armholes, and make kerchiefs upon the head of every stature to hunt souls! Will ye hunt the souls of my people, and will ye save the souls alive that come unto you?</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">19</span><span class="vtext">And will ye pollute me among my people for handfuls of barley and for pieces of bread, to slay the souls that should not die, and to save the souls alive that should not live, by your lying to my people that hear your lies?</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">20</span><span class="vtext">Wherefore thus saith the Lord GOD; Behold, I am against your pillows, wherewith ye there hunt the souls to make them fly, and I will tear them from your arms, and will let the souls go, even the souls that ye hunt to make them fly.</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">21</span><span class="vtext">Your kerchiefs also will I tear, and deliver my people out of your hand, and they shall be no more in your hand to be hunted; and ye shall know that I am the LORD.</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">22</span><span class="vtext">Because with lies ye have made the heart of the righteous sad, whom I have not made sad; and strengthened the hands of the wicked, that he should not return from his wicked way, by promising him life:</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="verse"><span class="vnum">23</span><span class="vtext">Therefore ye shall see no more vanity, nor divine divinations: for I will deliver my people out of your hand: and ye shall know that I am the LORD.</span></div>
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+    </article>
+
+    <div class="reader-toolbar bottom">
+      <a id="prevBtn2" class="btn btn-ghost" href="/bible/ezekiel/12/">‹ Previous</a>
+      <a id="nextBtn2" class="btn btn-primary" href="/bible/ezekiel/14/">Next chapter ›</a>
+    </div>
+  </section>
+
+  <section class="upsell" id="getapp">
+    <div class="wrap">
+      <div class="upsell-card">
+        <h3>This is the lite version.</h3>
+        <p>The FaithFlow app adds GRACE (your AI study companion), full offline access, every translation, audio Bible, devotionals, and more.</p>
+        <div class="upsell-list">
+          <span>GRACE AI companion</span>
+          <span>Offline &amp; synced</span>
+          <span>Every translation</span>
+          <span>Audio Bible</span>
+          <span>Faith Points</span>
+        </div>
+        <!-- App is in Closed Testing, no public Play Store listing yet. Swap
+             this back to <a class="btn btn-primary" href="REAL_PLAY_STORE_URL" rel="noopener">
+             once the app goes live, and remove the .btn-ghost/aria-disabled below. -->
+        <span class="btn btn-ghost" id="playStoreLink" aria-disabled="true">Coming Soon — App in Closed Testing</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="flegal">
+      <a href="/privacy-policy.html">Privacy Policy</a>·
+      <a href="/terms-conditions.html">Terms &amp; Conditions</a>·
+      <a href="/data-deletion.html">Data Deletion</a>
+    </div>
+    <div class="fkjv">Scripture text: King James Version (public domain).</div>
+    <div class="fcopy">© 2026 FaithFlow Network. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- Auth modal -->
+<div id="authModal" class="modal-overlay" hidden>
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="modalTitle">Save your account</h3>
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close">&times;</button>
+    </div>
+    <p class="sub" id="modalSub">Sign in to keep the same account across FaithFlow Web and the mobile app.</p>
+
+    <div id="googleSignInBlock" hidden>
+      <button class="btn google-btn" id="googleSignInBtn">
+        <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.6 15.9 18.9 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4c-7.4 0-13.8 4.1-17.2 10.1z"/><path fill="#4CAF50" d="M24 44c5.5 0 10.4-1.9 14.2-5.1l-6.6-5.5C29.6 35.4 26.9 36 24 36c-5.3 0-9.7-3.3-11.3-8l-6.6 5.1C9.1 39.6 16 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.4-2.3 4.4-4.3 5.9l6.6 5.5C41.9 36.5 44 30.9 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
+        Continue with Google
+      </button>
+      <div class="modal-divider">or</div>
+    </div>
+
+    <form id="emailForm">
+      <div class="field">
+        <label for="emailInput">Email</label>
+        <input type="email" id="emailInput" required autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="passwordInput">Password</label>
+        <input type="password" id="passwordInput" required autocomplete="current-password" minlength="6">
+      </div>
+      <button type="submit" class="btn btn-primary" id="emailSubmitBtn">Sign in</button>
+      <div class="modal-error" id="modalError"></div>
+    </form>
+
+    <div class="modal-toggle">
+      <span id="modalToggleText">Don't have an account?</span>
+      <button id="modalToggleBtn">Create one</button>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import {
+    getAuth, onAuthStateChanged, signInAnonymously,
+    GoogleAuthProvider, signInWithRedirect, linkWithRedirect, getRedirectResult,
+    signInWithEmailAndPassword, createUserWithEmailAndPassword,
+    EmailAuthProvider, linkWithCredential, signOut
+  } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+  import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyASl0KQBGHhhWG_txjSlbqPoftFq9YICL0",
+    authDomain: "auth.faithflownetwork.co.za",
+    projectId: "faithlow-21d59",
+    storageBucket: "faithlow-21d59.firebasestorage.app",
+    messagingSenderId: "1019630095674",
+    appId: "1:1019630095674:web:5d07d95f8b156004bb1403",
+    measurementId: "G-CMX38M3L67"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+  const googleProvider = new GoogleAuthProvider();
+
+  const GOOGLE_SIGNIN_ENABLED = true;
+  document.getElementById('googleSignInBlock').hidden = !GOOGLE_SIGNIN_ENABLED;
+
+  function isPremiumFromDoc(data) {
+    return !!data && data.isPremium === true;
+  }
+
+  // playStoreLink is a disabled placeholder (see the HTML comment above it)
+  // until the app has a real Play Store listing — nothing to wire up here.
+
+  // ---------------- AUTH UI ----------------
+  const authArea = document.getElementById('authArea');
+  const guestBanner = document.getElementById('guestBanner');
+  const guestUpgradeBtn = document.getElementById('guestUpgradeBtn');
+  const authModal = document.getElementById('authModal');
+  const modalCloseBtn = document.getElementById('modalCloseBtn');
+  const googleSignInBtn = document.getElementById('googleSignInBtn');
+  const emailForm = document.getElementById('emailForm');
+  const emailInput = document.getElementById('emailInput');
+  const passwordInput = document.getElementById('passwordInput');
+  const emailSubmitBtn = document.getElementById('emailSubmitBtn');
+  const modalError = document.getElementById('modalError');
+  const modalToggleBtn = document.getElementById('modalToggleBtn');
+  const modalToggleText = document.getElementById('modalToggleText');
+  const modalTitle = document.getElementById('modalTitle');
+
+  let isSignUpMode = false;
+  let currentUser = null;
+
+  function openAuthModal() {
+    modalError.textContent = '';
+    emailForm.reset();
+    authModal.hidden = false;
+  }
+  function closeAuthModal() { authModal.hidden = true; }
+  modalCloseBtn.addEventListener('click', closeAuthModal);
+  authModal.addEventListener('click', (e) => { if (e.target === authModal) closeAuthModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !authModal.hidden) closeAuthModal(); });
+  guestUpgradeBtn.addEventListener('click', openAuthModal);
+
+  modalToggleBtn.addEventListener('click', () => {
+    isSignUpMode = !isSignUpMode;
+    modalTitle.textContent = isSignUpMode ? 'Create your account' : 'Save your account';
+    emailSubmitBtn.textContent = isSignUpMode ? 'Create account' : 'Sign in';
+    modalToggleText.textContent = isSignUpMode ? 'Already have an account?' : "Don't have an account?";
+    modalToggleBtn.textContent = isSignUpMode ? 'Sign in' : 'Create one';
+    modalError.textContent = '';
+  });
+
+  async function upgradeOrSignIn(action, fallbackAction) {
+    if (currentUser && currentUser.isAnonymous) {
+      try {
+        await action();
+        return;
+      } catch (err) {
+        if (err.code === 'auth/credential-already-in-use' || err.code === 'auth/email-already-in-use') {
+          await fallbackAction();
+          return;
+        }
+        throw err;
+      }
+    } else {
+      await fallbackAction();
+    }
+  }
+
+  // Google sign-in uses a redirect instead of a popup (more reliable across
+  // browsers/popup blockers). The flow spans a full page navigation, so we
+  // stash intent in sessionStorage and finish the job in
+  // completePendingGoogleRedirect() below, once the page reloads.
+  const REDIRECT_INTENT_KEY = 'faithflow-google-redirect-intent';
+
+  googleSignInBtn.addEventListener('click', async () => {
+    modalError.textContent = '';
+    try {
+      if (currentUser && currentUser.isAnonymous) {
+        sessionStorage.setItem(REDIRECT_INTENT_KEY, 'link');
+        await linkWithRedirect(auth.currentUser, googleProvider);
+      } else {
+        sessionStorage.setItem(REDIRECT_INTENT_KEY, 'signin');
+        await signInWithRedirect(auth, googleProvider);
+      }
+      // Browser is navigating away now; nothing else runs here.
+    } catch (err) {
+      sessionStorage.removeItem(REDIRECT_INTENT_KEY);
+      modalError.textContent = err.message || 'Sign-in failed. Please try again.';
+    }
+  });
+
+  async function completePendingGoogleRedirect() {
+    const intent = sessionStorage.getItem(REDIRECT_INTENT_KEY);
+    if (!intent) return;
+    try {
+      const result = await getRedirectResult(auth);
+      sessionStorage.removeItem(REDIRECT_INTENT_KEY);
+      if (result) {
+        closeAuthModal();
+      } else if (!auth.currentUser) {
+        // Stale intent flag with nothing actually pending (e.g. a manual
+        // reload mid-flow) - fall back to a normal anonymous session
+        // instead of leaving onAuthStateChanged's guard blocked forever.
+        try { await signInAnonymously(auth); } catch (e) { console.error(e); }
+      }
+    } catch (err) {
+      if (intent === 'link' && (err.code === 'auth/credential-already-in-use' || err.code === 'auth/email-already-in-use')) {
+        // Anonymous account tried to claim a Google identity that's already a
+        // real account elsewhere - fall back to signing into that account.
+        sessionStorage.setItem(REDIRECT_INTENT_KEY, 'signin');
+        await signInWithRedirect(auth, googleProvider);
+        return;
+      }
+      sessionStorage.removeItem(REDIRECT_INTENT_KEY);
+      openAuthModal();
+      modalError.textContent = err.message || 'Sign-in failed. Please try again.';
+    }
+  }
+
+  emailForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    modalError.textContent = '';
+    const email = emailInput.value.trim();
+    const password = passwordInput.value;
+    try {
+      if (isSignUpMode) {
+        const credential = EmailAuthProvider.credential(email, password);
+        await upgradeOrSignIn(
+          () => linkWithCredential(auth.currentUser, credential),
+          () => createUserWithEmailAndPassword(auth, email, password)
+        );
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+      closeAuthModal();
+    } catch (err) {
+      modalError.textContent = err.message || 'Something went wrong. Please try again.';
+    }
+  });
+
+  function renderAuthArea(user) {
+    authArea.innerHTML = '';
+    if (!user || user.isAnonymous) {
+      guestBanner.hidden = !user;
+      const btn = document.createElement('button');
+      btn.className = 'btn btn-primary btn-sm';
+      btn.textContent = 'Sign in';
+      btn.addEventListener('click', openAuthModal);
+      authArea.appendChild(btn);
+      return;
+    }
+    guestBanner.hidden = true;
+    const chip = document.createElement('div');
+    chip.className = 'user-chip';
+    const initial = (user.displayName || user.email || '?').trim().charAt(0).toUpperCase();
+    chip.innerHTML = `
+      <div class="avatar">${user.photoURL ? `<img src="${user.photoURL}" alt="">` : initial}</div>
+      <span>${(user.displayName || user.email || 'Account').split(' ')[0]}</span>
+    `;
+    const menu = document.createElement('div');
+    menu.className = 'user-menu';
+    menu.hidden = true;
+    menu.innerHTML = `
+      <div class="menu-note">Signed in</div>
+      <hr>
+      <button id="signOutBtn">Sign out</button>
+    `;
+    chip.appendChild(menu);
+    chip.addEventListener('click', (e) => {
+      e.stopPropagation();
+      menu.hidden = !menu.hidden;
+    });
+    document.addEventListener('click', () => { menu.hidden = true; });
+    authArea.appendChild(chip);
+    menu.querySelector('#signOutBtn').addEventListener('click', () => signOut(auth));
+  }
+
+  // ---------------- ADS ----------------
+  let adsInjected = false;
+  function showAdsIfEligible(premium) {
+    const slot = document.getElementById('adSlotTop');
+    if (premium) { slot.hidden = true; return; }
+    slot.hidden = false;
+    if (!adsInjected) {
+      adsInjected = true;
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5919457083325799";
+      s.crossOrigin = "anonymous";
+      s.onload = () => {
+        try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) { /* ad blocked or unavailable */ }
+      };
+      document.head.appendChild(s);
+    }
+  }
+
+  onAuthStateChanged(auth, async (user) => {
+    currentUser = user;
+    if (!user) {
+      // A Google redirect may still be resolving (getRedirectResult() in
+      // completePendingGoogleRedirect() hasn't run/settled yet). Signing in
+      // anonymously here would race it and silently discard a successful
+      // Google login the moment it lands, reverting to a guest session.
+      if (sessionStorage.getItem(REDIRECT_INTENT_KEY)) return;
+      // No session yet — start as anonymous so browsing works immediately.
+      try { await signInAnonymously(auth); } catch (e) { console.error(e); }
+      return;
+    }
+    renderAuthArea(user);
+
+    if (user.isAnonymous) {
+      showAdsIfEligible(false);
+      return;
+    }
+
+    try {
+      const snap = await getDoc(doc(db, 'users', user.uid));
+      const premium = isPremiumFromDoc(snap.exists() ? snap.data() : null);
+      showAdsIfEligible(premium);
+    } catch (e) {
+      console.error('Could not read premium status, defaulting to showing ads.', e);
+      showAdsIfEligible(false);
+    }
+  });
+
+  completePendingGoogleRedirect();
+</script>
+
+<script type="module">
+  // ---------------- BIBLE READER ----------------
+  const bookSelect = document.getElementById('bookSelect');
+  const chapterSelect = document.getElementById('chapterSelect');
+  const verseContainer = document.getElementById('verseContainer');
+  const prevBtns = [document.getElementById('prevBtn'), document.getElementById('prevBtn2')];
+  const nextBtns = [document.getElementById('nextBtn'), document.getElementById('nextBtn2')];
+
+  let books = [];
+  let bookCache = new Map();
+  let current = { bookIndex: 0, chapter: 1 };
+
+  const STORAGE_KEY = 'faithflow-web-last-read';
+  const SITE_ORIGIN = 'https://faithflownetwork.co.za';
+
+  // Keep in sync with slugify() in build-bible-pages.js — both must agree on
+  // the same book-name -> URL-slug mapping for links to resolve correctly.
+  function slugify(name) {
+    return name.toLowerCase().replace(/\s+/g, '-');
+  }
+
+  function chapterPath(bookIndex, chapter) {
+    return `/bible/${slugify(books[bookIndex].name)}/${chapter}/`;
+  }
+
+  function chapterMeta(bookIndex, chapter) {
+    const book = books[bookIndex];
+    return {
+      title: `${book.name} ${chapter} KJV — Read Online Free | FaithFlow`,
+      description: `Read ${book.name} chapter ${chapter} (King James Version) online free at FaithFlow. Full text with verse numbers — no sign-up required.`,
+    };
+  }
+
+  function prevTarget() {
+    if (current.chapter > 1) return { bookIndex: current.bookIndex, chapter: current.chapter - 1 };
+    if (current.bookIndex > 0) {
+      const pb = current.bookIndex - 1;
+      return { bookIndex: pb, chapter: books[pb].chapters };
+    }
+    return null;
+  }
+
+  function nextTarget() {
+    const book = books[current.bookIndex];
+    if (current.chapter < book.chapters) return { bookIndex: current.bookIndex, chapter: current.chapter + 1 };
+    if (current.bookIndex < books.length - 1) return { bookIndex: current.bookIndex + 1, chapter: 1 };
+    return null;
+  }
+
+  // Reads the current /bible/<slug>/<chapter>/ URL, if any, back into a
+  // {bookIndex, chapter} state. Returns null for the bare /bible/ root (or
+  // anything unrecognized), so callers fall back to localStorage/default.
+  function parseLocation() {
+    const parts = location.pathname.replace(/^\/bible\/?/, '').split('/').filter(Boolean);
+    if (parts.length === 0) return null;
+    const bookIndex = books.findIndex(b => slugify(b.name) === parts[0]);
+    if (bookIndex === -1) return null;
+    const chapter = parts[1] ? parseInt(parts[1], 10) : 1;
+    if (!Number.isInteger(chapter) || chapter < 1 || chapter > books[bookIndex].chapters) return null;
+    return { bookIndex, chapter };
+  }
+
+  async function loadManifest() {
+    const res = await fetch('/bible/data/books.json');
+    books = await res.json();
+  }
+
+  function populateBookSelect() {
+    bookSelect.innerHTML = '';
+    let currentGroup = null;
+    books.forEach((b, i) => {
+      if (b.testament !== currentGroup) {
+        currentGroup = b.testament;
+        const og = document.createElement('optgroup');
+        og.label = currentGroup === 'OT' ? 'Old Testament' : 'New Testament';
+        og.dataset.testament = currentGroup;
+        bookSelect.appendChild(og);
+      }
+      const opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = b.name;
+      bookSelect.lastElementChild.appendChild(opt);
+    });
+  }
+
+  function populateChapterSelect(bookIndex) {
+    const book = books[bookIndex];
+    chapterSelect.innerHTML = '';
+    for (let c = 1; c <= book.chapters; c++) {
+      const opt = document.createElement('option');
+      opt.value = c;
+      opt.textContent = `Ch. ${c}`;
+      chapterSelect.appendChild(opt);
+    }
+  }
+
+  async function fetchBook(bookIndex) {
+    const meta = books[bookIndex];
+    if (bookCache.has(meta.file)) return bookCache.get(meta.file);
+    const res = await fetch(`/bible/data/kjv/${meta.file}.json`);
+    const data = await res.json();
+    bookCache.set(meta.file, data);
+    return data;
+  }
+
+  function renderSkeleton() {
+    verseContainer.innerHTML = `
+      <div class="skeleton">
+        <div class="skel-line" style="width:60%"></div>
+        <div class="skel-line" style="width:92%"></div>
+        <div class="skel-line" style="width:85%"></div>
+        <div class="skel-line" style="width:70%"></div>
+      </div>`;
+  }
+
+  function updateNavButtonStates() {
+    const prev = prevTarget();
+    const next = nextTarget();
+    prevBtns.forEach(a => {
+      if (prev) { a.href = chapterPath(prev.bookIndex, prev.chapter); a.removeAttribute('aria-disabled'); }
+      else { a.href = '#'; a.setAttribute('aria-disabled', 'true'); }
+    });
+    nextBtns.forEach(a => {
+      if (next) { a.href = chapterPath(next.bookIndex, next.chapter); a.removeAttribute('aria-disabled'); }
+      else { a.href = '#'; a.setAttribute('aria-disabled', 'true'); }
+    });
+  }
+
+  async function renderChapter(pushState = true) {
+    renderSkeleton();
+    const meta = books[current.bookIndex];
+    const data = await fetchBook(current.bookIndex);
+    const verses = data.chapters[current.chapter - 1];
+
+    bookSelect.value = current.bookIndex;
+    populateChapterSelect(current.bookIndex);
+    chapterSelect.value = current.chapter;
+
+    const frag = document.createDocumentFragment();
+    const heading = document.createElement('div');
+    heading.className = 'chapter-heading';
+    heading.textContent = `${meta.name} ${current.chapter}`;
+    frag.appendChild(heading);
+
+    verses.forEach((text, idx) => {
+      const vnum = idx + 1;
+      const row = document.createElement('div');
+      row.className = 'verse';
+      row.innerHTML = `<span class="vnum">${vnum}</span><span class="vtext">${text}</span>`;
+      row.addEventListener('click', () => onVerseTap(row, meta.name, current.chapter, vnum, text));
+      frag.appendChild(row);
+
+      const actions = document.createElement('div');
+      actions.className = 'verse-actions';
+      actions.innerHTML = `<button class="copy-btn">Copy</button>`;
+      actions.querySelector('.copy-btn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        const ref = `${meta.name} ${current.chapter}:${vnum} — "${text}" (KJV)`;
+        navigator.clipboard?.writeText(ref).catch(() => {});
+      });
+      frag.appendChild(actions);
+    });
+
+    verseContainer.innerHTML = '';
+    verseContainer.appendChild(frag);
+    updateNavButtonStates();
+
+    const path = chapterPath(current.bookIndex, current.chapter);
+    const { title, description } = chapterMeta(current.bookIndex, current.chapter);
+    document.title = title;
+    document.querySelector('meta[name="description"]')?.setAttribute('content', description);
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', SITE_ORIGIN + path);
+
+    if (pushState) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(current));
+      if (location.pathname !== path) history.pushState(current, '', path);
+    }
+    window.scrollTo({ top: document.querySelector('.bible-hero').offsetHeight, behavior: 'auto' });
+  }
+
+  let selectedRow = null;
+  function onVerseTap(row, book, chapter, vnum, text) {
+    if (selectedRow && selectedRow !== row) selectedRow.classList.remove('selected');
+    row.classList.toggle('selected');
+    selectedRow = row.classList.contains('selected') ? row : null;
+  }
+
+  function goToChapter(bookIndex, chapter) {
+    current = { bookIndex, chapter };
+    renderChapter();
+  }
+
+  function goPrev() {
+    const t = prevTarget();
+    if (t) goToChapter(t.bookIndex, t.chapter);
+  }
+
+  function goNext() {
+    const t = nextTarget();
+    if (t) goToChapter(t.bookIndex, t.chapter);
+  }
+
+  prevBtns.forEach(b => b.addEventListener('click', (e) => { e.preventDefault(); goPrev(); }));
+  nextBtns.forEach(b => b.addEventListener('click', (e) => { e.preventDefault(); goNext(); }));
+
+  window.addEventListener('popstate', () => {
+    const parsed = parseLocation();
+    if (parsed) { current = parsed; renderChapter(false); }
+  });
+
+  bookSelect.addEventListener('change', () => {
+    goToChapter(Number(bookSelect.value), 1);
+  });
+  chapterSelect.addEventListener('change', () => {
+    goToChapter(current.bookIndex, Number(chapterSelect.value));
+  });
+
+  (async function init() {
+    await loadManifest();
+    populateBookSelect();
+
+    // A direct hit on /bible/<slug>/<chapter>/ wins over the last-read
+    // position — someone followed a specific link (or a search result) and
+    // should land on that chapter, not get redirected to where they left off.
+    let start = parseLocation();
+    if (!start) {
+      start = { bookIndex: 0, chapter: 1 };
+      try {
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+        if (saved && books[saved.bookIndex] && saved.chapter <= books[saved.bookIndex].chapters) {
+          start = saved;
+        }
+      } catch (e) { /* ignore malformed local storage */ }
+    }
+
+    current = start;
+    populateChapterSelect(current.bookIndex);
+    await renderChapter(false);
+  })();
+</script>
+
+</body>
+</html>
