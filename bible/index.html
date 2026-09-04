@@ -74,6 +74,8 @@
   .btn-ghost{ background: rgba(245,230,208,0.06); color: var(--parchment); border:1px solid rgba(245,230,208,0.22); }
   .btn-ghost:hover{ background: rgba(245,230,208,0.12); }
   .btn-sm{ padding:7px 13px; font-size:12.5px; }
+  .btn[aria-disabled="true"]{ cursor:default; opacity:.7; }
+  .btn[aria-disabled="true"]:hover{ background: rgba(245,230,208,0.06); transform:none; box-shadow:none; }
 
   .user-chip{
     display:flex; align-items:center; gap:8px;
@@ -330,7 +332,10 @@
           <span>Audio Bible</span>
           <span>Faith Points</span>
         </div>
-        <a class="btn btn-primary" href="#" id="playStoreLink" rel="noopener">Get FaithFlow on Google Play</a>
+        <!-- App is in Closed Testing, no public Play Store listing yet. Swap
+             this back to <a class="btn btn-primary" href="REAL_PLAY_STORE_URL" rel="noopener">
+             once the app goes live, and remove the .btn-ghost/aria-disabled below. -->
+        <span class="btn btn-ghost" id="playStoreLink" aria-disabled="true">Coming Soon — App in Closed Testing</span>
       </div>
     </div>
   </section>
@@ -417,8 +422,8 @@
     return !!data && data.isPremium === true;
   }
 
-  // TODO: replace with the real Play Store URL when published.
-  document.getElementById('playStoreLink').href = "https://play.google.com/store/apps";
+  // playStoreLink is a disabled placeholder (see the HTML comment above it)
+  // until the app has a real Play Store listing — nothing to wire up here.
 
   // ---------------- AUTH UI ----------------
   const authArea = document.getElementById('authArea');
