@@ -1,0 +1,26 @@
+{
+  "name": "faithflow-website",
+  "version": "1.0.0",
+  "description": "Static build tooling for faithflownetwork.co.za (Bible reader page generation, cross-reference export).",
+  "main": "build-bible-pages.js",
+  "scripts": {
+    "export-cross-references": "node export-cross-references.js",
+    "build-bible-pages": "node build-bible-pages.js",
+    "build": "npm run export-cross-references && npm run build-bible-pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LesleyHope4/faithflow-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/LesleyHope4/faithflow-website/issues"
+  },
+  "homepage": "https://github.com/LesleyHope4/faithflow-website#readme",
+  "devDependencies": {
+    "sql.js": "^1.14.2"
+  }
+}

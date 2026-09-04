@@ -189,6 +189,21 @@
   }
   .verse-actions button:hover{ color: var(--gold-bright); border-color: rgba(232,200,122,0.4); }
 
+  .crossref-toggle{ margin:2px 10px 8px 44px; }
+  .crossref-hint{
+    background:none; border:none; padding:0; font-size:12px; color: var(--gold);
+    font-weight:500; cursor:pointer; display:inline-flex; align-items:center; gap:4px;
+    font-family:'Poppins', sans-serif;
+  }
+  .crossref-hint:hover{ color: var(--gold-bright); }
+  .crossref-list{ display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
+  .crossref-list a{
+    padding:5px 11px; border-radius:100px; background: rgba(245,230,208,0.08);
+    border:1px solid rgba(245,230,208,0.2); font-size:11.5px; color: var(--parchment-dim);
+    text-decoration:none;
+  }
+  .crossref-list a:hover{ color: var(--gold-bright); border-color: rgba(232,200,122,0.4); }
+
   .skeleton{ display:flex; flex-direction:column; gap:10px; padding-top:4px; }
   .skel-line{ height:16px; border-radius:6px; background: rgba(245,230,208,0.06); animation: pulse 1.3s ease-in-out infinite; }
   @keyframes pulse{ 0%,100%{opacity:.4;} 50%{opacity:.9;} }
@@ -254,6 +269,7 @@
   .google-btn{ width:100%; justify-content:center; background:#fff; color:#3c4043; gap:10px; }
   .google-btn:hover{ background:#f5f5f5; transform:none; }
 </style>
+<meta name="google-site-verification" content="IYwPSIiwwdBha4AFTKCEEt1tJYRlpu-ftw_p8JSVtbE" />
 </head>
 <body>
 
@@ -315,70 +331,103 @@
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
       <div class="verse"><span class="vnum">2</span><span class="vtext">I know it is so of a truth: but how should man be just with God?</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/4/">Job 4:17</a><a href="/bible/job/25/">Job 25:4</a><a href="/bible/romans/3/">Romans 3:20</a><a href="/bible/psalms/143/">Psalms 143:2</a><a href="/bible/job/34/">Job 34:5</a></div></div>
       <div class="verse"><span class="vnum">3</span><span class="vtext">If he will contend with him, he cannot answer him one of a thousand.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/10/">Job 10:2</a><a href="/bible/job/40/">Job 40:2</a><a href="/bible/psalms/19/">Psalms 19:12</a><a href="/bible/psalms/40/">Psalms 40:12</a><a href="/bible/romans/9/">Romans 9:20</a></div></div>
       <div class="verse"><span class="vnum">4</span><span class="vtext">He is wise in heart, and mighty in strength: who hath hardened himself against him, and hath prospered?</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/36/">Job 36:5</a><a href="/bible/ephesians/3/">Ephesians 3:20</a><a href="/bible/exodus/14/">Exodus 14:17-18</a><a href="/bible/jude/1/">Jude 1:24-25</a><a href="/bible/ephesians/3/">Ephesians 3:10</a></div></div>
       <div class="verse"><span class="vnum">5</span><span class="vtext">Which removeth the mountains, and they know not: which overturneth them in his anger.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/luke/21/">Luke 21:11</a><a href="/bible/matthew/27/">Matthew 27:51</a><a href="/bible/revelation/16/">Revelation 16:18-20</a><a href="/bible/revelation/11/">Revelation 11:13</a><a href="/bible/habakkuk/3/">Habakkuk 3:10</a></div></div>
       <div class="verse"><span class="vnum">6</span><span class="vtext">Which shaketh the earth out of her place, and the pillars thereof tremble.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/psalms/75/">Psalms 75:3</a><a href="/bible/isaiah/2/">Isaiah 2:21</a><a href="/bible/haggai/2/">Haggai 2:6</a><a href="/bible/hebrews/12/">Hebrews 12:26</a><a href="/bible/job/38/">Job 38:4-7</a></div></div>
       <div class="verse"><span class="vnum">7</span><span class="vtext">Which commandeth the sun, and it riseth not; and sealeth up the stars.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/isaiah/13/">Isaiah 13:10</a><a href="/bible/amos/8/">Amos 8:9</a><a href="/bible/luke/21/">Luke 21:25-26</a><a href="/bible/ezekiel/32/">Ezekiel 32:7-8</a><a href="/bible/matthew/24/">Matthew 24:29</a></div></div>
       <div class="verse"><span class="vnum">8</span><span class="vtext">Which alone spreadeth out the heavens, and treadeth upon the waves of the sea.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/isaiah/40/">Isaiah 40:22</a><a href="/bible/isaiah/44/">Isaiah 44:24</a><a href="/bible/psalms/104/">Psalms 104:2-3</a><a href="/bible/job/37/">Job 37:18</a><a href="/bible/zechariah/12/">Zechariah 12:1</a></div></div>
       <div class="verse"><span class="vnum">9</span><span class="vtext">Which maketh Arcturus, Orion, and Pleiades, and the chambers of the south.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/amos/5/">Amos 5:8</a><a href="/bible/job/38/">Job 38:31-41</a><a href="/bible/genesis/1/">Genesis 1:16</a><a href="/bible/psalms/147/">Psalms 147:4</a><a href="/bible/acts/28/">Acts 28:13</a></div></div>
       <div class="verse"><span class="vnum">10</span><span class="vtext">Which doeth great things past finding out; yea, and wonders without number.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/5/">Job 5:9</a><a href="/bible/psalms/72/">Psalms 72:18</a><a href="/bible/romans/11/">Romans 11:33</a><a href="/bible/ephesians/3/">Ephesians 3:20</a><a href="/bible/daniel/4/">Daniel 4:2-3</a></div></div>
       <div class="verse"><span class="vnum">11</span><span class="vtext">Lo, he goeth by me, and I see him not: he passeth on also, but I perceive him not.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/23/">Job 23:8-9</a><a href="/bible/job/35/">Job 35:14</a><a href="/bible/1-timothy/6/">1 Timothy 6:16</a><a href="/bible/psalms/77/">Psalms 77:19</a></div></div>
       <div class="verse"><span class="vnum">12</span><span class="vtext">Behold, he taketh away, who can hinder him? who will say unto him, What doest thou?</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/isaiah/45/">Isaiah 45:9</a><a href="/bible/job/11/">Job 11:10</a><a href="/bible/job/23/">Job 23:13</a><a href="/bible/romans/11/">Romans 11:34</a><a href="/bible/job/34/">Job 34:29</a></div></div>
       <div class="verse"><span class="vnum">13</span><span class="vtext">If God will not withdraw his anger, the proud helpers do stoop under him.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/26/">Job 26:12</a><a href="/bible/psalms/89/">Psalms 89:10</a><a href="/bible/isaiah/30/">Isaiah 30:7</a><a href="/bible/isaiah/51/">Isaiah 51:9</a><a href="/bible/james/4/">James 4:6-7</a></div></div>
       <div class="verse"><span class="vnum">14</span><span class="vtext">How much less shall I answer him, and choose out my words to reason with him?</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/25/">Job 25:6</a><a href="/bible/job/4/">Job 4:19</a><a href="/bible/job/23/">Job 23:7</a><a href="/bible/job/23/">Job 23:4</a><a href="/bible/1-kings/8/">1 Kings 8:27</a></div></div>
       <div class="verse"><span class="vnum">15</span><span class="vtext">Whom, though I were righteous, yet would I not answer, but I would make supplication to my judge.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/10/">Job 10:15</a><a href="/bible/job/8/">Job 8:5</a><a href="/bible/job/22/">Job 22:27</a><a href="/bible/job/5/">Job 5:8</a><a href="/bible/1-peter/2/">1 Peter 2:23</a></div></div>
       <div class="verse"><span class="vnum">16</span><span class="vtext">If I had called, and he had answered me; yet would I not believe that he had hearkened unto my voice.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/judges/6/">Judges 6:13</a><a href="/bible/psalms/18/">Psalms 18:6</a><a href="/bible/psalms/66/">Psalms 66:18-20</a><a href="/bible/luke/24/">Luke 24:41</a><a href="/bible/psalms/116/">Psalms 116:1-2</a></div></div>
       <div class="verse"><span class="vnum">17</span><span class="vtext">For he breaketh me with a tempest, and multiplieth my wounds without cause.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/16/">Job 16:14</a><a href="/bible/job/2/">Job 2:3</a><a href="/bible/job/34/">Job 34:6</a><a href="/bible/ezekiel/13/">Ezekiel 13:13</a><a href="/bible/isaiah/28/">Isaiah 28:17</a></div></div>
       <div class="verse"><span class="vnum">18</span><span class="vtext">He will not suffer me to take my breath, but filleth me with bitterness.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/7/">Job 7:19</a><a href="/bible/lamentations/3/">Lamentations 3:15</a><a href="/bible/psalms/88/">Psalms 88:7</a><a href="/bible/hebrews/12/">Hebrews 12:11</a><a href="/bible/job/27/">Job 27:2</a></div></div>
       <div class="verse"><span class="vnum">19</span><span class="vtext">If I speak of strength, lo, he is strong: and if of judgment, who shall set me a time to plead?</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/9/">Job 9:32-33</a><a href="/bible/1-corinthians/1/">1 Corinthians 1:25</a><a href="/bible/job/9/">Job 9:4</a><a href="/bible/matthew/6/">Matthew 6:13</a><a href="/bible/psalms/62/">Psalms 62:11</a></div></div>
       <div class="verse"><span class="vnum">20</span><span class="vtext">If I justify myself, mine own mouth shall condemn me: if I say, I am perfect, it shall also prove me perverse.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/15/">Job 15:5-6</a><a href="/bible/job/34/">Job 34:35</a><a href="/bible/psalms/143/">Psalms 143:2</a><a href="/bible/job/1/">Job 1:1</a><a href="/bible/psalms/130/">Psalms 130:3</a></div></div>
       <div class="verse"><span class="vnum">21</span><span class="vtext">Though I were perfect, yet would I not know my soul: I would despise my life.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/1/">Job 1:1</a><a href="/bible/proverbs/28/">Proverbs 28:26</a><a href="/bible/psalms/139/">Psalms 139:23-24</a><a href="/bible/job/7/">Job 7:21</a><a href="/bible/jeremiah/17/">Jeremiah 17:9-10</a></div></div>
       <div class="verse"><span class="vnum">22</span><span class="vtext">This is one thing, therefore I said it, He destroyeth the perfect and the wicked.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/ecclesiastes/9/">Ecclesiastes 9:1-3</a><a href="/bible/luke/13/">Luke 13:2-4</a><a href="/bible/ezekiel/21/">Ezekiel 21:3-4</a><a href="/bible/job/10/">Job 10:8</a></div></div>
       <div class="verse"><span class="vnum">23</span><span class="vtext">If the scourge slay suddenly, he will laugh at the trial of the innocent.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/2/">Job 2:7</a><a href="/bible/hebrews/11/">Hebrews 11:36-37</a><a href="/bible/job/24/">Job 24:12</a><a href="/bible/ezekiel/14/">Ezekiel 14:19-21</a><a href="/bible/job/8/">Job 8:20</a></div></div>
       <div class="verse"><span class="vnum">24</span><span class="vtext">The earth is given into the hand of the wicked: he covereth the faces of the judges thereof; if not, where, and who is he?</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/10/">Job 10:3</a><a href="/bible/psalms/73/">Psalms 73:3-7</a><a href="/bible/habakkuk/1/">Habakkuk 1:14-17</a><a href="/bible/jeremiah/12/">Jeremiah 12:1-2</a><a href="/bible/job/21/">Job 21:7-15</a></div></div>
       <div class="verse"><span class="vnum">25</span><span class="vtext">Now my days are swifter than a post: they flee away, they see no good.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/7/">Job 7:6-7</a><a href="/bible/james/4/">James 4:14</a><a href="/bible/psalms/90/">Psalms 90:9-10</a><a href="/bible/psalms/89/">Psalms 89:47</a><a href="/bible/esther/8/">Esther 8:14</a></div></div>
       <div class="verse"><span class="vnum">26</span><span class="vtext">They are passed away as the swift ships: as the eagle that hasteth to the prey.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/habakkuk/1/">Habakkuk 1:8</a><a href="/bible/isaiah/18/">Isaiah 18:2</a><a href="/bible/job/39/">Job 39:27-30</a><a href="/bible/2-samuel/1/">2 Samuel 1:23</a><a href="/bible/lamentations/4/">Lamentations 4:19</a></div></div>
       <div class="verse"><span class="vnum">27</span><span class="vtext">If I say, I will forget my complaint, I will leave off my heaviness, and comfort myself:</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/7/">Job 7:13</a><a href="/bible/jeremiah/8/">Jeremiah 8:18</a><a href="/bible/job/7/">Job 7:11</a><a href="/bible/psalms/77/">Psalms 77:2-3</a></div></div>
       <div class="verse"><span class="vnum">28</span><span class="vtext">I am afraid of all my sorrows, I know that thou wilt not hold me innocent.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/psalms/119/">Psalms 119:120</a><a href="/bible/job/3/">Job 3:25</a><a href="/bible/job/9/">Job 9:20-21</a><a href="/bible/psalms/130/">Psalms 130:3</a><a href="/bible/job/21/">Job 21:6</a></div></div>
       <div class="verse"><span class="vnum">29</span><span class="vtext">If I be wicked, why then labour I in vain?</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/job/22/">Job 22:5-30</a><a href="/bible/job/10/">Job 10:14-17</a><a href="/bible/job/21/">Job 21:16-17</a><a href="/bible/job/21/">Job 21:27</a><a href="/bible/job/10/">Job 10:7</a></div></div>
       <div class="verse"><span class="vnum">30</span><span class="vtext">If I wash myself with snow water, and make my hands never so clean;</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/jeremiah/2/">Jeremiah 2:22</a><a href="/bible/psalms/26/">Psalms 26:6</a><a href="/bible/1-john/1/">1 John 1:8</a><a href="/bible/isaiah/1/">Isaiah 1:16-18</a><a href="/bible/jeremiah/4/">Jeremiah 4:14</a></div></div>
       <div class="verse"><span class="vnum">31</span><span class="vtext">Yet shalt thou plunge me in the ditch, and mine own clothes shall abhor me.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/isaiah/64/">Isaiah 64:6</a><a href="/bible/isaiah/59/">Isaiah 59:6</a><a href="/bible/philippians/3/">Philippians 3:8-9</a><a href="/bible/job/9/">Job 9:20</a><a href="/bible/job/15/">Job 15:6</a></div></div>
       <div class="verse"><span class="vnum">32</span><span class="vtext">For he is not a man, as I am, that I should answer him, and we should come together in judgment.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/ecclesiastes/6/">Ecclesiastes 6:10</a><a href="/bible/romans/9/">Romans 9:20</a><a href="/bible/psalms/143/">Psalms 143:2</a><a href="/bible/numbers/23/">Numbers 23:19</a><a href="/bible/1-samuel/16/">1 Samuel 16:7</a></div></div>
       <div class="verse"><span class="vnum">33</span><span class="vtext">Neither is there any daysman betwixt us, that might lay his hand upon us both.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/1-samuel/2/">1 Samuel 2:25</a><a href="/bible/1-john/2/">1 John 2:1-2</a><a href="/bible/job/9/">Job 9:19</a><a href="/bible/psalms/106/">Psalms 106:23</a><a href="/bible/1-kings/3/">1 Kings 3:16-28</a></div></div>
       <div class="verse"><span class="vnum">34</span><span class="vtext">Let him take his rod away from me, and let not his fear terrify me:</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/psalms/39/">Psalms 39:10</a><a href="/bible/job/13/">Job 13:11</a><a href="/bible/job/33/">Job 33:7</a><a href="/bible/job/13/">Job 13:20-22</a><a href="/bible/job/37/">Job 37:1</a></div></div>
       <div class="verse"><span class="vnum">35</span><span class="vtext">Then would I speak, and not fear him; but it is not so with me.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
     </article>
@@ -720,6 +769,7 @@
 
   let books = [];
   let bookCache = new Map();
+  let crossRefCache = new Map();
   let current = { bookIndex: 0, chapter: 1 };
 
   const STORAGE_KEY = 'faithflow-web-last-read';
@@ -815,6 +865,63 @@
     return data;
   }
 
+  // { [chapter]: { [verse]: [[toBook, toChapter, toVerseStart, toVerseEnd], ...] } },
+  // top 5 by votes per verse — see export-cross-references.js. Falls back to
+  // {} on any failure so a missing/broken file just means no indicators show.
+  async function fetchCrossRefs(bookIndex) {
+    const meta = books[bookIndex];
+    if (crossRefCache.has(meta.file)) return crossRefCache.get(meta.file);
+    let data = {};
+    try {
+      const res = await fetch(`/bible/data/crossrefs/${meta.file}.json`);
+      if (res.ok) data = await res.json();
+    } catch (e) { /* no cross-references for this book — not fatal */ }
+    crossRefCache.set(meta.file, data);
+    return data;
+  }
+
+  // [toBook, toChapter, toVerseStart, toVerseEnd] tuples -> the collapsed
+  // "Cross references" indicator + its (initially hidden) list of links.
+  // Mirrors the mobile app's tap-to-reveal "SEE ALSO" chips.
+  function buildCrossRefElement(refs) {
+    const wrap = document.createElement('div');
+    wrap.className = 'crossref-toggle';
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'crossref-hint';
+    btn.innerHTML = '<span aria-hidden="true">⇄</span> Cross references';
+
+    const list = document.createElement('div');
+    list.className = 'crossref-list';
+    list.hidden = true;
+
+    refs.forEach(([toBook, toChapter, start, end]) => {
+      const toBookIndex = toBook - 1;
+      const toName = books[toBookIndex]?.name;
+      if (!toName) return; // unrecognized book number — skip rather than break the page
+      const label = `${toName} ${toChapter}:${start === end ? start : `${start}-${end}`}`;
+      const a = document.createElement('a');
+      a.href = chapterPath(toBookIndex, toChapter);
+      a.textContent = label;
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        goToChapter(toBookIndex, toChapter);
+      });
+      list.appendChild(a);
+    });
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      list.hidden = !list.hidden;
+    });
+
+    wrap.appendChild(btn);
+    wrap.appendChild(list);
+    return wrap;
+  }
+
   function renderSkeleton() {
     verseContainer.innerHTML = `
       <div class="skeleton">
@@ -841,8 +948,12 @@
   async function renderChapter(pushState = true) {
     renderSkeleton();
     const meta = books[current.bookIndex];
-    const data = await fetchBook(current.bookIndex);
+    const [data, crossRefs] = await Promise.all([
+      fetchBook(current.bookIndex),
+      fetchCrossRefs(current.bookIndex),
+    ]);
     const verses = data.chapters[current.chapter - 1];
+    const chapterRefs = crossRefs[String(current.chapter)] || {};
 
     bookSelect.value = current.bookIndex;
     populateChapterSelect(current.bookIndex);
@@ -871,6 +982,9 @@
         navigator.clipboard?.writeText(ref).catch(() => {});
       });
       frag.appendChild(actions);
+
+      const refs = chapterRefs[String(vnum)];
+      if (refs && refs.length) frag.appendChild(buildCrossRefElement(refs));
     });
 
     verseContainer.innerHTML = '';

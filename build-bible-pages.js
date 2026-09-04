@@ -72,11 +72,38 @@ function chapterPath(bookIndex, chapter) {
   return `/bible/${slugify(books[bookIndex].name)}/${chapter}/`;
 }
 
-function verseHtml(bookName, chapter, verses) {
+const crossRefCache = new Map();
+function loadCrossRefs(meta) {
+  if (crossRefCache.has(meta.file)) return crossRefCache.get(meta.file);
+  const filePath = path.join(BIBLE_DIR, 'data', 'crossrefs', `${meta.file}.json`);
+  const data = fs.existsSync(filePath) ? JSON.parse(fs.readFileSync(filePath, 'utf8')) : {};
+  crossRefCache.set(meta.file, data);
+  return data;
+}
+
+// Mirrors buildCrossRefElement() in bible/index.html — keep both in sync.
+// Unlike the client version this renders the link list open (not behind a
+// hidden toggle): a static page has no JS-driven interaction until the
+// client router takes over, and real crawlable <a href> links here are a
+// deliberate bonus for internal link discovery between related chapters.
+function crossRefHtml(refs) {
+  const links = refs.map(([toBook, toChapter, start, end]) => {
+    const toBookIndex = toBook - 1;
+    const toName = books[toBookIndex]?.name;
+    if (!toName) return '';
+    const label = `${toName} ${toChapter}:${start === end ? start : `${start}-${end}`}`;
+    return `<a href="${escapeAttr(chapterPath(toBookIndex, toChapter))}">${escapeHtml(label)}</a>`;
+  }).join('');
+  return `<div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list">${links}</div></div>`;
+}
+
+function verseHtml(bookName, chapter, verses, chapterRefs) {
   const rows = verses.map((text, idx) => {
     const vnum = idx + 1;
+    const refs = chapterRefs[String(vnum)];
+    const crossref = refs && refs.length ? `\n      ${crossRefHtml(refs)}` : '';
     return `      <div class="verse"><span class="vnum">${vnum}</span><span class="vtext">${escapeHtml(text)}</span></div>
-      <div class="verse-actions"><button class="copy-btn">Copy</button></div>`;
+      <div class="verse-actions"><button class="copy-btn">Copy</button></div>${crossref}`;
   }).join('\n');
   return `<div class="chapter-heading">${escapeHtml(bookName)} ${chapter}</div>\n${rows}`;
 }
@@ -119,6 +146,7 @@ function renderPage(bookIndex, chapter, canonicalOverride) {
   const meta = books[bookIndex];
   const data = loadBook(meta);
   const verses = data.chapters[chapter - 1];
+  const chapterRefs = loadCrossRefs(meta)[String(chapter)] || {};
   const { title, description } = chapterMeta(meta.name, chapter);
   const canonicalPath = canonicalOverride || chapterPath(bookIndex, chapter);
   const prev = prevTarget(bookIndex, chapter);
@@ -136,7 +164,7 @@ function renderPage(bookIndex, chapter, canonicalOverride) {
       </div>`);
 
   html = html.replace(OLD_VERSE_CONTAINER,
-    `<article id="verseContainer" class="verse-container" aria-live="polite">\n      ${verseHtml(meta.name, chapter, verses)}\n    </article>`);
+    `<article id="verseContainer" class="verse-container" aria-live="polite">\n      ${verseHtml(meta.name, chapter, verses, chapterRefs)}\n    </article>`);
 
   html = html.replace(OLD_NAV_BOTTOM, `<div class="reader-toolbar bottom">
       ${navAnchor('prevBtn2', 'btn btn-ghost', '‹ Previous', prev)}

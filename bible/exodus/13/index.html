@@ -189,6 +189,21 @@
   }
   .verse-actions button:hover{ color: var(--gold-bright); border-color: rgba(232,200,122,0.4); }
 
+  .crossref-toggle{ margin:2px 10px 8px 44px; }
+  .crossref-hint{
+    background:none; border:none; padding:0; font-size:12px; color: var(--gold);
+    font-weight:500; cursor:pointer; display:inline-flex; align-items:center; gap:4px;
+    font-family:'Poppins', sans-serif;
+  }
+  .crossref-hint:hover{ color: var(--gold-bright); }
+  .crossref-list{ display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
+  .crossref-list a{
+    padding:5px 11px; border-radius:100px; background: rgba(245,230,208,0.08);
+    border:1px solid rgba(245,230,208,0.2); font-size:11.5px; color: var(--parchment-dim);
+    text-decoration:none;
+  }
+  .crossref-list a:hover{ color: var(--gold-bright); border-color: rgba(232,200,122,0.4); }
+
   .skeleton{ display:flex; flex-direction:column; gap:10px; padding-top:4px; }
   .skel-line{ height:16px; border-radius:6px; background: rgba(245,230,208,0.06); animation: pulse 1.3s ease-in-out infinite; }
   @keyframes pulse{ 0%,100%{opacity:.4;} 50%{opacity:.9;} }
@@ -254,6 +269,7 @@
   .google-btn{ width:100%; justify-content:center; background:#fff; color:#3c4043; gap:10px; }
   .google-btn:hover{ background:#f5f5f5; transform:none; }
 </style>
+<meta name="google-site-verification" content="IYwPSIiwwdBha4AFTKCEEt1tJYRlpu-ftw_p8JSVtbE" />
 </head>
 <body>
 
@@ -315,46 +331,67 @@
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
       <div class="verse"><span class="vnum">2</span><span class="vtext">Sanctify unto me all the firstborn, whatsoever openeth the womb among the children of Israel, both of man and of beast: it is mine.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/luke/2/">Luke 2:23</a><a href="/bible/numbers/3/">Numbers 3:13</a><a href="/bible/deuteronomy/15/">Deuteronomy 15:19</a><a href="/bible/exodus/22/">Exodus 22:29-30</a><a href="/bible/numbers/8/">Numbers 8:16-17</a></div></div>
       <div class="verse"><span class="vnum">3</span><span class="vtext">And Moses said unto the people, Remember this day, in which ye came out from Egypt, out of the house of bondage; for by strength of hand the LORD brought you out from this place: there shall no leavened bread be eaten.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/deuteronomy/24/">Deuteronomy 24:18</a><a href="/bible/deuteronomy/5/">Deuteronomy 5:15</a><a href="/bible/exodus/20/">Exodus 20:2</a><a href="/bible/deuteronomy/5/">Deuteronomy 5:6</a><a href="/bible/deuteronomy/16/">Deuteronomy 16:12</a></div></div>
       <div class="verse"><span class="vnum">4</span><span class="vtext">This day came ye out in the month Abib.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/exodus/34/">Exodus 34:18</a><a href="/bible/exodus/23/">Exodus 23:15</a><a href="/bible/exodus/12/">Exodus 12:2</a><a href="/bible/deuteronomy/16/">Deuteronomy 16:1-3</a></div></div>
       <div class="verse"><span class="vnum">5</span><span class="vtext">And it shall be when the LORD shall bring thee into the land of the Canaanites, and the Hittites, and the Amorites, and the Hivites, and the Jebusites, which he sware unto thy fathers to give thee, a land flowing with milk and honey, that thou shalt keep this service in this month.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/exodus/3/">Exodus 3:8</a><a href="/bible/joshua/24/">Joshua 24:11</a><a href="/bible/exodus/6/">Exodus 6:8</a><a href="/bible/exodus/12/">Exodus 12:25-26</a><a href="/bible/exodus/34/">Exodus 34:11</a></div></div>
       <div class="verse"><span class="vnum">6</span><span class="vtext">Seven days thou shalt eat unleavened bread, and in the seventh day shall be a feast to the LORD.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/exodus/12/">Exodus 12:15-20</a><a href="/bible/leviticus/23/">Leviticus 23:8</a><a href="/bible/exodus/34/">Exodus 34:18</a></div></div>
       <div class="verse"><span class="vnum">7</span><span class="vtext">Unleavened bread shall be eaten seven days; and there shall no leavened bread be seen with thee, neither shall there be leaven seen with thee in all thy quarters.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/exodus/12/">Exodus 12:19</a><a href="/bible/matthew/16/">Matthew 16:6</a></div></div>
       <div class="verse"><span class="vnum">8</span><span class="vtext">And thou shalt shew thy son in that day, saying, This is done because of that which the LORD did unto me when I came forth out of Egypt.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/exodus/13/">Exodus 13:14</a><a href="/bible/exodus/12/">Exodus 12:26-27</a><a href="/bible/psalms/44/">Psalms 44:1</a><a href="/bible/psalms/78/">Psalms 78:3-8</a><a href="/bible/isaiah/38/">Isaiah 38:19</a></div></div>
       <div class="verse"><span class="vnum">9</span><span class="vtext">And it shall be for a sign unto thee upon thine hand, and for a memorial between thine eyes, that the LORD’s law may be in thy mouth: for with a strong hand hath the LORD brought thee out of Egypt.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/deuteronomy/6/">Deuteronomy 6:8</a><a href="/bible/deuteronomy/11/">Deuteronomy 11:18-19</a><a href="/bible/exodus/13/">Exodus 13:16</a><a href="/bible/numbers/15/">Numbers 15:39</a><a href="/bible/exodus/12/">Exodus 12:14</a></div></div>
       <div class="verse"><span class="vnum">10</span><span class="vtext">Thou shalt therefore keep this ordinance in his season from year to year.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/exodus/12/">Exodus 12:14</a><a href="/bible/exodus/12/">Exodus 12:24-25</a><a href="/bible/exodus/23/">Exodus 23:15</a><a href="/bible/leviticus/23/">Leviticus 23:6</a><a href="/bible/deuteronomy/16/">Deuteronomy 16:3-4</a></div></div>
       <div class="verse"><span class="vnum">11</span><span class="vtext">And it shall be when the LORD shall bring thee into the land of the Canaanites, as he sware unto thee and to thy fathers, and shall give it thee,</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/exodus/13/">Exodus 13:5</a></div></div>
       <div class="verse"><span class="vnum">12</span><span class="vtext">That thou shalt set apart unto the LORD all that openeth the matrix, and every firstling that cometh of a beast which thou hast; the males shall be the LORD’s.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/numbers/18/">Numbers 18:15</a><a href="/bible/leviticus/27/">Leviticus 27:26</a><a href="/bible/exodus/34/">Exodus 34:19</a><a href="/bible/ezekiel/44/">Ezekiel 44:30</a><a href="/bible/exodus/13/">Exodus 13:2</a></div></div>
       <div class="verse"><span class="vnum">13</span><span class="vtext">And every firstling of an ass thou shalt redeem with a lamb; and if thou wilt not redeem it, then thou shalt break his neck: and all the firstborn of man among thy children shalt thou redeem.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/exodus/34/">Exodus 34:20</a><a href="/bible/numbers/18/">Numbers 18:15-17</a><a href="/bible/exodus/12/">Exodus 12:21</a><a href="/bible/exodus/12/">Exodus 12:3</a><a href="/bible/revelation/14/">Revelation 14:4</a></div></div>
       <div class="verse"><span class="vnum">14</span><span class="vtext">And it shall be when thy son asketh thee in time to come, saying, What is this? that thou shalt say unto him, By strength of hand the LORD brought us out from Egypt, from the house of bondage:</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/joshua/4/">Joshua 4:6</a><a href="/bible/exodus/13/">Exodus 13:3</a><a href="/bible/deuteronomy/6/">Deuteronomy 6:20-24</a><a href="/bible/exodus/12/">Exodus 12:26-27</a><a href="/bible/psalms/145/">Psalms 145:4</a></div></div>
       <div class="verse"><span class="vnum">15</span><span class="vtext">And it came to pass, when Pharaoh would hardly let us go, that the LORD slew all the firstborn in the land of Egypt, both the firstborn of man, and the firstborn of beast: therefore I sacrifice to the LORD all that openeth the matrix, being males; but all the firstborn of my children I redeem.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/exodus/12/">Exodus 12:29</a></div></div>
       <div class="verse"><span class="vnum">16</span><span class="vtext">And it shall be for a token upon thine hand, and for frontlets between thine eyes: for by strength of hand the LORD brought us forth out of Egypt.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/exodus/13/">Exodus 13:9</a><a href="/bible/deuteronomy/6/">Deuteronomy 6:7-9</a><a href="/bible/deuteronomy/11/">Deuteronomy 11:18</a><a href="/bible/exodus/13/">Exodus 13:14</a><a href="/bible/deuteronomy/26/">Deuteronomy 26:8</a></div></div>
       <div class="verse"><span class="vnum">17</span><span class="vtext">And it came to pass, when Pharaoh had let the people go, that God led them not through the way of the land of the Philistines, although that was near; for God said, Lest peradventure the people repent when they see war, and they return to Egypt:</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/exodus/14/">Exodus 14:11-12</a><a href="/bible/nehemiah/9/">Nehemiah 9:17</a><a href="/bible/numbers/14/">Numbers 14:1-4</a><a href="/bible/luke/14/">Luke 14:27-32</a><a href="/bible/1-kings/8/">1 Kings 8:47</a></div></div>
       <div class="verse"><span class="vnum">18</span><span class="vtext">But God led the people about, through the way of the wilderness of the Red sea: and the children of Israel went up harnessed out of the land of Egypt.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/deuteronomy/32/">Deuteronomy 32:10</a><a href="/bible/exodus/14/">Exodus 14:2</a><a href="/bible/numbers/33/">Numbers 33:6-8</a><a href="/bible/exodus/12/">Exodus 12:51</a><a href="/bible/psalms/107/">Psalms 107:7</a></div></div>
       <div class="verse"><span class="vnum">19</span><span class="vtext">And Moses took the bones of Joseph with him: for he had straitly sworn the children of Israel, saying, God will surely visit you; and ye shall carry up my bones away hence with you.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/genesis/50/">Genesis 50:24-25</a><a href="/bible/joshua/24/">Joshua 24:32</a><a href="/bible/acts/7/">Acts 7:16</a><a href="/bible/genesis/48/">Genesis 48:21</a><a href="/bible/luke/7/">Luke 7:16</a></div></div>
       <div class="verse"><span class="vnum">20</span><span class="vtext">And they took their journey from Succoth, and encamped in Etham, in the edge of the wilderness.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/numbers/33/">Numbers 33:5-6</a><a href="/bible/exodus/12/">Exodus 12:37</a></div></div>
       <div class="verse"><span class="vnum">21</span><span class="vtext">And the LORD went before them by day in a pillar of a cloud, to lead them the way; and by night in a pillar of fire, to give them light; to go by day and night:</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/1-corinthians/10/">1 Corinthians 10:1-2</a><a href="/bible/nehemiah/9/">Nehemiah 9:12</a><a href="/bible/psalms/99/">Psalms 99:7</a><a href="/bible/deuteronomy/1/">Deuteronomy 1:33</a><a href="/bible/psalms/105/">Psalms 105:39</a></div></div>
       <div class="verse"><span class="vnum">22</span><span class="vtext">He took not away the pillar of the cloud by day, nor the pillar of fire by night, from before the people.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/psalms/121/">Psalms 121:5-8</a><a href="/bible/revelation/10/">Revelation 10:1</a></div></div>
     </article>
 
     <div class="reader-toolbar bottom">
@@ -694,6 +731,7 @@
 
   let books = [];
   let bookCache = new Map();
+  let crossRefCache = new Map();
   let current = { bookIndex: 0, chapter: 1 };
 
   const STORAGE_KEY = 'faithflow-web-last-read';
@@ -789,6 +827,63 @@
     return data;
   }
 
+  // { [chapter]: { [verse]: [[toBook, toChapter, toVerseStart, toVerseEnd], ...] } },
+  // top 5 by votes per verse — see export-cross-references.js. Falls back to
+  // {} on any failure so a missing/broken file just means no indicators show.
+  async function fetchCrossRefs(bookIndex) {
+    const meta = books[bookIndex];
+    if (crossRefCache.has(meta.file)) return crossRefCache.get(meta.file);
+    let data = {};
+    try {
+      const res = await fetch(`/bible/data/crossrefs/${meta.file}.json`);
+      if (res.ok) data = await res.json();
+    } catch (e) { /* no cross-references for this book — not fatal */ }
+    crossRefCache.set(meta.file, data);
+    return data;
+  }
+
+  // [toBook, toChapter, toVerseStart, toVerseEnd] tuples -> the collapsed
+  // "Cross references" indicator + its (initially hidden) list of links.
+  // Mirrors the mobile app's tap-to-reveal "SEE ALSO" chips.
+  function buildCrossRefElement(refs) {
+    const wrap = document.createElement('div');
+    wrap.className = 'crossref-toggle';
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'crossref-hint';
+    btn.innerHTML = '<span aria-hidden="true">⇄</span> Cross references';
+
+    const list = document.createElement('div');
+    list.className = 'crossref-list';
+    list.hidden = true;
+
+    refs.forEach(([toBook, toChapter, start, end]) => {
+      const toBookIndex = toBook - 1;
+      const toName = books[toBookIndex]?.name;
+      if (!toName) return; // unrecognized book number — skip rather than break the page
+      const label = `${toName} ${toChapter}:${start === end ? start : `${start}-${end}`}`;
+      const a = document.createElement('a');
+      a.href = chapterPath(toBookIndex, toChapter);
+      a.textContent = label;
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        goToChapter(toBookIndex, toChapter);
+      });
+      list.appendChild(a);
+    });
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      list.hidden = !list.hidden;
+    });
+
+    wrap.appendChild(btn);
+    wrap.appendChild(list);
+    return wrap;
+  }
+
   function renderSkeleton() {
     verseContainer.innerHTML = `
       <div class="skeleton">
@@ -815,8 +910,12 @@
   async function renderChapter(pushState = true) {
     renderSkeleton();
     const meta = books[current.bookIndex];
-    const data = await fetchBook(current.bookIndex);
+    const [data, crossRefs] = await Promise.all([
+      fetchBook(current.bookIndex),
+      fetchCrossRefs(current.bookIndex),
+    ]);
     const verses = data.chapters[current.chapter - 1];
+    const chapterRefs = crossRefs[String(current.chapter)] || {};
 
     bookSelect.value = current.bookIndex;
     populateChapterSelect(current.bookIndex);
@@ -845,6 +944,9 @@
         navigator.clipboard?.writeText(ref).catch(() => {});
       });
       frag.appendChild(actions);
+
+      const refs = chapterRefs[String(vnum)];
+      if (refs && refs.length) frag.appendChild(buildCrossRefElement(refs));
     });
 
     verseContainer.innerHTML = '';

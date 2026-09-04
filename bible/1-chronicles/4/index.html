@@ -189,6 +189,21 @@
   }
   .verse-actions button:hover{ color: var(--gold-bright); border-color: rgba(232,200,122,0.4); }
 
+  .crossref-toggle{ margin:2px 10px 8px 44px; }
+  .crossref-hint{
+    background:none; border:none; padding:0; font-size:12px; color: var(--gold);
+    font-weight:500; cursor:pointer; display:inline-flex; align-items:center; gap:4px;
+    font-family:'Poppins', sans-serif;
+  }
+  .crossref-hint:hover{ color: var(--gold-bright); }
+  .crossref-list{ display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
+  .crossref-list a{
+    padding:5px 11px; border-radius:100px; background: rgba(245,230,208,0.08);
+    border:1px solid rgba(245,230,208,0.2); font-size:11.5px; color: var(--parchment-dim);
+    text-decoration:none;
+  }
+  .crossref-list a:hover{ color: var(--gold-bright); border-color: rgba(232,200,122,0.4); }
+
   .skeleton{ display:flex; flex-direction:column; gap:10px; padding-top:4px; }
   .skel-line{ height:16px; border-radius:6px; background: rgba(245,230,208,0.06); animation: pulse 1.3s ease-in-out infinite; }
   @keyframes pulse{ 0%,100%{opacity:.4;} 50%{opacity:.9;} }
@@ -254,6 +269,7 @@
   .google-btn{ width:100%; justify-content:center; background:#fff; color:#3c4043; gap:10px; }
   .google-btn:hover{ background:#f5f5f5; transform:none; }
 </style>
+<meta name="google-site-verification" content="IYwPSIiwwdBha4AFTKCEEt1tJYRlpu-ftw_p8JSVtbE" />
 </head>
 <body>
 
@@ -313,14 +329,19 @@
       <div class="chapter-heading">1 Chronicles 4</div>
       <div class="verse"><span class="vnum">1</span><span class="vtext">The sons of Judah; Pharez, Hezron, and Carmi, and Hur, and Shobal.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/genesis/46/">Genesis 46:12</a><a href="/bible/genesis/38/">Genesis 38:29</a><a href="/bible/matthew/1/">Matthew 1:3</a><a href="/bible/ruth/4/">Ruth 4:18</a><a href="/bible/1-chronicles/2/">1 Chronicles 2:9</a></div></div>
       <div class="verse"><span class="vnum">2</span><span class="vtext">And Reaiah the son of Shobal begat Jahath; and Jahath begat Ahumai, and Lahad. These are the families of the Zorathites.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/judges/13/">Judges 13:25</a><a href="/bible/joshua/15/">Joshua 15:33</a><a href="/bible/1-chronicles/2/">1 Chronicles 2:52-54</a></div></div>
       <div class="verse"><span class="vnum">3</span><span class="vtext">And these were of the father of Etam; Jezreel, and Ishma, and Idbash: and the name of their sister was Hazelelponi:</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/2-chronicles/11/">2 Chronicles 11:6</a><a href="/bible/judges/15/">Judges 15:11</a></div></div>
       <div class="verse"><span class="vnum">4</span><span class="vtext">And Penuel the father of Gedor, and Ezer the father of Hushah. These are the sons of Hur, the firstborn of Ephratah, the father of Bethlehem.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/1-chronicles/4/">1 Chronicles 4:18</a><a href="/bible/1-chronicles/2/">1 Chronicles 2:50</a><a href="/bible/1-chronicles/4/">1 Chronicles 4:39</a><a href="/bible/joshua/15/">Joshua 15:36</a><a href="/bible/1-chronicles/2/">1 Chronicles 2:19</a></div></div>
       <div class="verse"><span class="vnum">5</span><span class="vtext">And Ashur the father of Tekoa had two wives, Helah and Naarah.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/1-chronicles/2/">1 Chronicles 2:24</a></div></div>
       <div class="verse"><span class="vnum">6</span><span class="vtext">And Naarah bare him Ahuzam, and Hepher, and Temeni, and Haahashtari. These were the sons of Naarah.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
       <div class="verse"><span class="vnum">7</span><span class="vtext">And the sons of Helah were, Zereth, and Jezoar, and Ethnan.</span></div>
@@ -329,54 +350,72 @@
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
       <div class="verse"><span class="vnum">9</span><span class="vtext">And Jabez was more honourable than his brethren: and his mother called his name Jabez, saying, Because I bare him with sorrow.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/genesis/34/">Genesis 34:19</a><a href="/bible/acts/17/">Acts 17:11</a><a href="/bible/1-samuel/4/">1 Samuel 4:21</a><a href="/bible/1-chronicles/7/">1 Chronicles 7:23</a><a href="/bible/genesis/35/">Genesis 35:18</a></div></div>
       <div class="verse"><span class="vnum">10</span><span class="vtext">And Jabez called on the God of Israel, saying, Oh that thou wouldest bless me indeed, and enlarge my coast, and that thine hand might be with me, and that thou wouldest keep me from evil, that it may not grieve me! And God granted him that which he requested.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/matthew/7/">Matthew 7:7-11</a><a href="/bible/psalms/116/">Psalms 116:1-4</a><a href="/bible/proverbs/10/">Proverbs 10:22</a><a href="/bible/jeremiah/33/">Jeremiah 33:3</a><a href="/bible/isaiah/41/">Isaiah 41:10</a></div></div>
       <div class="verse"><span class="vnum">11</span><span class="vtext">And Chelub the brother of Shuah begat Mehir, which was the father of Eshton.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
       <div class="verse"><span class="vnum">12</span><span class="vtext">And Eshton begat Bethrapha, and Paseah, and Tehinnah the father of Irnahash. These are the men of Rechah.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
       <div class="verse"><span class="vnum">13</span><span class="vtext">And the sons of Kenaz; Othniel, and Seraiah: and the sons of Othniel; Hathath.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/joshua/15/">Joshua 15:17</a><a href="/bible/judges/1/">Judges 1:13</a><a href="/bible/judges/3/">Judges 3:9-11</a></div></div>
       <div class="verse"><span class="vnum">14</span><span class="vtext">And Meonothai begat Ophrah: and Seraiah begat Joab, the father of the valley of Charashim; for they were craftsmen.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/2-kings/24/">2 Kings 24:14</a><a href="/bible/nehemiah/11/">Nehemiah 11:35</a></div></div>
       <div class="verse"><span class="vnum">15</span><span class="vtext">And the sons of Caleb the son of Jephunneh; Iru, Elah, and Naam: and the sons of Elah, even Kenaz.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/numbers/13/">Numbers 13:6</a><a href="/bible/joshua/15/">Joshua 15:13-20</a><a href="/bible/numbers/14/">Numbers 14:6-10</a><a href="/bible/numbers/14/">Numbers 14:30</a><a href="/bible/joshua/14/">Joshua 14:6-14</a></div></div>
       <div class="verse"><span class="vnum">16</span><span class="vtext">And the sons of Jehaleleel; Ziph, and Ziphah, Tiria, and Asareel.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
       <div class="verse"><span class="vnum">17</span><span class="vtext">And the sons of Ezra were, Jether, and Mered, and Epher, and Jalon: and she bare Miriam, and Shammai, and Ishbah the father of Eshtemoa.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/1-chronicles/4/">1 Chronicles 4:19</a><a href="/bible/joshua/15/">Joshua 15:50</a><a href="/bible/1-chronicles/6/">1 Chronicles 6:57</a><a href="/bible/1-samuel/30/">1 Samuel 30:28</a><a href="/bible/1-chronicles/21/">1 Chronicles 21:24</a></div></div>
       <div class="verse"><span class="vnum">18</span><span class="vtext">And his wife Jehudijah bare Jered the father of Gedor, and Heber the father of Socho, and Jekuthiel the father of Zanoah. And these are the sons of Bithiah the daughter of Pharaoh, which Mered took.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/1-chronicles/4/">1 Chronicles 4:4</a><a href="/bible/joshua/15/">Joshua 15:58</a><a href="/bible/1-chronicles/2/">1 Chronicles 2:42</a><a href="/bible/1-chronicles/4/">1 Chronicles 4:39</a><a href="/bible/joshua/15/">Joshua 15:34-35</a></div></div>
       <div class="verse"><span class="vnum">19</span><span class="vtext">And the sons of his wife Hodiah the sister of Naham, the father of Keilah the Garmite, and Eshtemoa the Maachathite.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/joshua/15/">Joshua 15:44</a><a href="/bible/1-samuel/23/">1 Samuel 23:1-13</a></div></div>
       <div class="verse"><span class="vnum">20</span><span class="vtext">And the sons of Shimon were, Amnon, and Rinnah, Benhanan, and Tilon. And the sons of Ishi were, Zoheth, and Benzoheth.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
       <div class="verse"><span class="vnum">21</span><span class="vtext">The sons of Shelah the son of Judah were, Er the father of Lecah, and Laadah the father of Mareshah, and the families of the house of them that wrought fine linen, of the house of Ashbea,</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/genesis/38/">Genesis 38:5</a><a href="/bible/1-chronicles/2/">1 Chronicles 2:3</a><a href="/bible/genesis/46/">Genesis 46:12</a><a href="/bible/numbers/26/">Numbers 26:20</a><a href="/bible/1-chronicles/9/">1 Chronicles 9:5</a></div></div>
       <div class="verse"><span class="vnum">22</span><span class="vtext">And Jokim, and the men of Chozeba, and Joash, and Saraph, who had the dominion in Moab, and Jashubilehem. And these are ancient things.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
       <div class="verse"><span class="vnum">23</span><span class="vtext">These were the potters, and those that dwelt among plants and hedges: there they dwelt with the king for his work.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/psalms/81/">Psalms 81:6</a><a href="/bible/1-chronicles/4/">1 Chronicles 4:14</a></div></div>
       <div class="verse"><span class="vnum">24</span><span class="vtext">The sons of Simeon were, Nemuel, and Jamin, Jarib, Zerah, and Shaul:</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/genesis/46/">Genesis 46:10</a><a href="/bible/numbers/26/">Numbers 26:12-14</a><a href="/bible/exodus/6/">Exodus 6:15</a></div></div>
       <div class="verse"><span class="vnum">25</span><span class="vtext">Shallum his son, Mibsam his son, Mishma his son.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
       <div class="verse"><span class="vnum">26</span><span class="vtext">And the sons of Mishma; Hamuel his son, Zacchur his son, Shimei his son.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
       <div class="verse"><span class="vnum">27</span><span class="vtext">And Shimei had sixteen sons and six daughters; but his brethren had not many children, neither did all their family multiply, like to the children of Judah.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/numbers/26/">Numbers 26:14</a><a href="/bible/numbers/26/">Numbers 26:22</a><a href="/bible/numbers/2/">Numbers 2:13</a><a href="/bible/numbers/2/">Numbers 2:4</a></div></div>
       <div class="verse"><span class="vnum">28</span><span class="vtext">And they dwelt at Beersheba, and Moladah, and Hazarshual,</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/joshua/19/">Joshua 19:2-3</a><a href="/bible/joshua/15/">Joshua 15:28-29</a><a href="/bible/joshua/19/">Joshua 19:9</a></div></div>
       <div class="verse"><span class="vnum">29</span><span class="vtext">And at Bilhah, and at Ezem, and at Tolad,</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/joshua/19/">Joshua 19:3-4</a></div></div>
       <div class="verse"><span class="vnum">30</span><span class="vtext">And at Bethuel, and at Hormah, and at Ziklag,</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/1-chronicles/12/">1 Chronicles 12:1</a><a href="/bible/1-samuel/27/">1 Samuel 27:6</a><a href="/bible/joshua/19/">Joshua 19:4-5</a><a href="/bible/1-samuel/30/">1 Samuel 30:1</a><a href="/bible/joshua/15/">Joshua 15:31</a></div></div>
       <div class="verse"><span class="vnum">31</span><span class="vtext">And at Bethmarcaboth, and Hazarsusim, and at Bethbirei, and at Shaaraim. These were their cities unto the reign of David.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/joshua/19/">Joshua 19:5-6</a></div></div>
       <div class="verse"><span class="vnum">32</span><span class="vtext">And their villages were, Etam, and Ain, Rimmon, and Tochen, and Ashan, five cities:</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/joshua/19/">Joshua 19:7</a></div></div>
       <div class="verse"><span class="vnum">33</span><span class="vtext">And all their villages that were round about the same cities, unto Baal. These were their habitations, and their genealogy.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/joshua/19/">Joshua 19:8</a></div></div>
       <div class="verse"><span class="vnum">34</span><span class="vtext">And Meshobab, and Jamlech, and Joshah, the son of Amaziah,</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
       <div class="verse"><span class="vnum">35</span><span class="vtext">And Joel, and Jehu the son of Josibiah, the son of Seraiah, the son of Asiel,</span></div>
@@ -387,16 +426,22 @@
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
       <div class="verse"><span class="vnum">38</span><span class="vtext">These mentioned by their names were princes in their families: and the house of their fathers increased greatly.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/1-chronicles/5/">1 Chronicles 5:24</a><a href="/bible/genesis/6/">Genesis 6:4</a></div></div>
       <div class="verse"><span class="vnum">39</span><span class="vtext">And they went to the entrance of Gedor, even unto the east side of the valley, to seek pasture for their flocks.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/joshua/15/">Joshua 15:58</a><a href="/bible/1-chronicles/4/">1 Chronicles 4:4</a><a href="/bible/1-chronicles/4/">1 Chronicles 4:18</a><a href="/bible/joshua/12/">Joshua 12:13</a></div></div>
       <div class="verse"><span class="vnum">40</span><span class="vtext">And they found fat pasture and good, and the land was wide, and quiet, and peaceable; for they of Ham had dwelt there of old.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/judges/18/">Judges 18:7-10</a><a href="/bible/psalms/105/">Psalms 105:23</a><a href="/bible/genesis/9/">Genesis 9:22-29</a><a href="/bible/genesis/10/">Genesis 10:6</a><a href="/bible/psalms/78/">Psalms 78:51</a></div></div>
       <div class="verse"><span class="vnum">41</span><span class="vtext">And these written by name came in the days of Hezekiah king of Judah, and smote their tents, and the habitations that were found there, and destroyed them utterly unto this day, and dwelt in their rooms: because there was pasture there for their flocks.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/judges/10/">Judges 10:12</a><a href="/bible/acts/17/">Acts 17:26</a><a href="/bible/1-chronicles/4/">1 Chronicles 4:34-38</a><a href="/bible/2-kings/18/">2 Kings 18:8-12</a><a href="/bible/isaiah/14/">Isaiah 14:28-32</a></div></div>
       <div class="verse"><span class="vnum">42</span><span class="vtext">And some of them, even of the sons of Simeon, five hundred men, went to mount Seir, having for their captains Pelatiah, and Neariah, and Rephaiah, and Uzziel, the sons of Ishi.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/genesis/36/">Genesis 36:8-9</a><a href="/bible/deuteronomy/1/">Deuteronomy 1:2</a></div></div>
       <div class="verse"><span class="vnum">43</span><span class="vtext">And they smote the rest of the Amalekites that were escaped, and dwelt there unto this day.</span></div>
       <div class="verse-actions"><button class="copy-btn">Copy</button></div>
+      <div class="crossref-toggle"><button type="button" class="crossref-hint"><span aria-hidden="true">⇄</span> Cross references</button><div class="crossref-list"><a href="/bible/1-samuel/30/">1 Samuel 30:17</a><a href="/bible/1-samuel/15/">1 Samuel 15:7-8</a><a href="/bible/2-samuel/8/">2 Samuel 8:12</a><a href="/bible/matthew/27/">Matthew 27:8</a><a href="/bible/2-chronicles/5/">2 Chronicles 5:9</a></div></div>
     </article>
 
     <div class="reader-toolbar bottom">
@@ -736,6 +781,7 @@
 
   let books = [];
   let bookCache = new Map();
+  let crossRefCache = new Map();
   let current = { bookIndex: 0, chapter: 1 };
 
   const STORAGE_KEY = 'faithflow-web-last-read';
@@ -831,6 +877,63 @@
     return data;
   }
 
+  // { [chapter]: { [verse]: [[toBook, toChapter, toVerseStart, toVerseEnd], ...] } },
+  // top 5 by votes per verse — see export-cross-references.js. Falls back to
+  // {} on any failure so a missing/broken file just means no indicators show.
+  async function fetchCrossRefs(bookIndex) {
+    const meta = books[bookIndex];
+    if (crossRefCache.has(meta.file)) return crossRefCache.get(meta.file);
+    let data = {};
+    try {
+      const res = await fetch(`/bible/data/crossrefs/${meta.file}.json`);
+      if (res.ok) data = await res.json();
+    } catch (e) { /* no cross-references for this book — not fatal */ }
+    crossRefCache.set(meta.file, data);
+    return data;
+  }
+
+  // [toBook, toChapter, toVerseStart, toVerseEnd] tuples -> the collapsed
+  // "Cross references" indicator + its (initially hidden) list of links.
+  // Mirrors the mobile app's tap-to-reveal "SEE ALSO" chips.
+  function buildCrossRefElement(refs) {
+    const wrap = document.createElement('div');
+    wrap.className = 'crossref-toggle';
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'crossref-hint';
+    btn.innerHTML = '<span aria-hidden="true">⇄</span> Cross references';
+
+    const list = document.createElement('div');
+    list.className = 'crossref-list';
+    list.hidden = true;
+
+    refs.forEach(([toBook, toChapter, start, end]) => {
+      const toBookIndex = toBook - 1;
+      const toName = books[toBookIndex]?.name;
+      if (!toName) return; // unrecognized book number — skip rather than break the page
+      const label = `${toName} ${toChapter}:${start === end ? start : `${start}-${end}`}`;
+      const a = document.createElement('a');
+      a.href = chapterPath(toBookIndex, toChapter);
+      a.textContent = label;
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        goToChapter(toBookIndex, toChapter);
+      });
+      list.appendChild(a);
+    });
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      list.hidden = !list.hidden;
+    });
+
+    wrap.appendChild(btn);
+    wrap.appendChild(list);
+    return wrap;
+  }
+
   function renderSkeleton() {
     verseContainer.innerHTML = `
       <div class="skeleton">
@@ -857,8 +960,12 @@
   async function renderChapter(pushState = true) {
     renderSkeleton();
     const meta = books[current.bookIndex];
-    const data = await fetchBook(current.bookIndex);
+    const [data, crossRefs] = await Promise.all([
+      fetchBook(current.bookIndex),
+      fetchCrossRefs(current.bookIndex),
+    ]);
     const verses = data.chapters[current.chapter - 1];
+    const chapterRefs = crossRefs[String(current.chapter)] || {};
 
     bookSelect.value = current.bookIndex;
     populateChapterSelect(current.bookIndex);
@@ -887,6 +994,9 @@
         navigator.clipboard?.writeText(ref).catch(() => {});
       });
       frag.appendChild(actions);
+
+      const refs = chapterRefs[String(vnum)];
+      if (refs && refs.length) frag.appendChild(buildCrossRefElement(refs));
     });
 
     verseContainer.innerHTML = '';
