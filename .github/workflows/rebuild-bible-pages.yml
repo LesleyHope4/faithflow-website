@@ -1,0 +1,47 @@
+name: Rebuild Bible pages
+
+# Regenerates every /bible/<book>/<chapter>/ page from bible/index.html
+# whenever the template (or the build script) changes. Can also be run by hand
+# from the Actions tab ("Run workflow").
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'bible/index.html'
+      - 'build-bible-pages.js'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build chapter pages
+        run: node build-bible-pages.js
+
+      - name: Commit rebuilt pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+          else
+            git commit -m "Rebuild Bible chapter pages from template"
+            git push
+          fi
+
+      - name: Make sure GitHub Pages republishes
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"
